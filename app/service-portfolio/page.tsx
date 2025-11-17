@@ -62,27 +62,7 @@ const LeaderCard = ({ name, title, location, imageUrl }: { name: string, title: 
     );
 };
 
-const LeaderAndOrgChart = () => {
-    return <>
-        <h2 className="mb-8 text-4xl font-extrabold text-gray-900 md:text-5xl">
-            Meet Our Leader & Our Team
-        </h2>
-        <LeaderCard
-            name="Hu Qian"
-            title="Head of Department GS/OSD3 & GS/OSD6 Vietnam"
-            location="HCM"
-            imageUrl="/images/Hu_Qian.jpg"
-        />
-        <Image
-            alt={'OrgChart'}
-            src={"/images/VN_OSD_Org_Chart.png"}
-            width={1920}
-            height={1080}
-            unoptimized
-            className='w-full'
-        />
-    </>
-}
+
 
 const ServicePortfolioPage = () => {
     return <>

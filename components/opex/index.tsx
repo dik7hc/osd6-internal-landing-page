@@ -18,8 +18,7 @@ const activitiesData = [
 
 const TeamActivities = () => {
     return (
-        <section className="bg-white py-16 sm:py-24">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 {/* Section Header */}
                 <div className="mb-16 text-center">
@@ -58,7 +57,6 @@ const TeamActivities = () => {
                         <ArrowRight className="ml-2 size-5" />
                     </a>
                 </div>
-            </div>
         </section>
     );
 };

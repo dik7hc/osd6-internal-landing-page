@@ -19,7 +19,7 @@ const Header = ({
                         <Image
                             width={120}
                             height={80}
-                            src="/svg/Group.svg"
+                            src="/svg/logo.svg"
                             alt="Logo"
                             quality={20}
                             className="-ml-7 scale-75" //-ml-7

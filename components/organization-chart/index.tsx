@@ -167,10 +167,9 @@ const OrganizationChart = () => {
 
 
     return (
-        <section className="w-full py-16 sm:py-24">
-            <div className="mx-auto flex max-w-7xl flex-col items-center px-4 sm:px-6 lg:px-8">
+        <section className="mx-auto flex max-w-7xl flex-col items-center px-4 sm:px-6 lg:px-8">
 
-                <h2 className="mb-12 text-4xl font-bold text-gray-800">
+                <h2 className="mb-12 text-3xl font-bold text-gray-800">
                     Our Organization
                 </h2>
 
@@ -210,7 +209,6 @@ const OrganizationChart = () => {
                         <Department department={activeOrganization.departments[2]} />
                     </div>
                 </div>
-            </div>
         </section>
     )
 }

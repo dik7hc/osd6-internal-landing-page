@@ -1,4 +1,4 @@
-import OrganizationChart from "@/components/banner-stack";
+import OrganizationChart from "@/components/organization-chart";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import HeroSection from "@/components/hero";
