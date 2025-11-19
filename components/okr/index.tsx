@@ -1,181 +1,378 @@
 'use client'
-import React, { useState } from 'react';
-import { TrendingUp, Award, Expand, Users, Lightbulb } from 'lucide-react';
+import React, { useState } from 'react'
+import Image from 'next/image'
+import {
+    ArrowRight,
+    Clock,
+    Check
+} from 'lucide-react'
+import { cn } from '@/lib/utils' // Assuming you have a utility for conditional class names
 
-const okrData = [
-    {
-        id: 0,
-        icon: TrendingUp,
-        label: "Business Revenue Growth",
-        keyResults: [
-            { text: "KR1: 60% business revenue growth in Q4.2025", status: "Achieved" },
-            { text: "KR2: 4 new service contracts within 2025", status: "Achieved" },
-            { text: "KR3: 2 new service concepts introduced in 2025", status: "On Track" },
-        ]
-    },
+const menuItems = [
     {
         id: 1,
-        icon: Award,
-        label: "Quality & Recognition",
-        keyResults: [
-            { text: "KR1: Achieve 95% customer satisfaction score", status: "On Track" },
-            { text: "KR2: Win 'Industry Leader' award", status: "At Risk" },
-            { text: "KR3: Maintain 4.8+ star rating on all platforms", status: "On Track" },
-        ]
+        title: 'Customer Satisfaction',
+        iconSrc: '/svg/okrStatusIcons/customerSatisfaction.svg',
+        stats: { achieved: '-', onTrack: 3, inProgress: '-' }
     },
     {
         id: 2,
-        icon: Expand,
-        label: "Market Expansion",
-        keyResults: [
-            { text: "KR1: Launch in 2 new international markets", status: "On Track" },
-            { text: "KR2: Establish 3 new distribution channels", status: "Achieved" },
-        ]
+        title: 'Business Growth',
+        iconSrc: '/svg/okrStatusIcons/businessGrowth.svg',
+        stats: { achieved: 2, onTrack: 3, inProgress: '-' }
     },
     {
         id: 3,
-        icon: Users,
-        label: "Team Growth & Culture",
-        keyResults: [
-            { text: "KR1: Hire 10 new engineers by Q3", status: "Achieved" },
-            { text: "KR2: Achieve 90% employee retention rate", status: "On Track" },
-            { text: "KR3: Implement new mentorship program", status: "On Track" },
-        ]
+        title: 'Value of Services',
+        iconSrc: '/svg/okrStatusIcons/valueOfServices.svg',
+        stats: { achieved: 1, onTrack: 2, inProgress: '-' }
     },
     {
         id: 4,
-        icon: Lightbulb,
-        label: "Product Innovation",
-        keyResults: [
-            { text: "KR1: Launch 3 new major product features", status: "On Track" },
-            { text: "KR2: File 2 new patents related to core tech", status: "On Track" },
-            { text: "KR3: Reduce average bug resolution time by 50%", status: "At Risk" },
-        ]
+        title: 'Organizational Capability',
+        iconSrc: '/svg/okrStatusIcons/organizationalCapability.svg',
+        stats: { achieved: 2, onTrack: 1, inProgress: '-' }
+    },
+    {
+        id: 5,
+        title: 'Digitalization',
+        iconSrc: '/svg/okrStatusIcons/digitalization.svg',
+        stats: { achieved: '-', onTrack: 2, inProgress: 1 }
     }
-];
+]
 
-
-const OkrButton = ({ item, isSelected, onClick }: any) => {
-    const Icon = item.icon;
-
-    const buttonClasses = isSelected
-        ? 'bg-purple-700 text-white transform scale-105 shadow-lg'
-        : 'bg-gray-100 text-gray-800 hover:bg-gray-200 shadow-md';
-
-    const iconSize = isSelected ? 36 : 28;
+const DashboardComponent = () => {
+    const [activeTab, setActiveTab] = useState(1)
 
     return (
-        <button
-            onClick={onClick}
-            className={`flex items-center justify-center rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 ${buttonClasses}`}
-            style={{ 
-                width: isSelected ? '96px' : '80px', 
-                height: isSelected ? '96px' : '80px',
-                minWidth: isSelected ? '96px' : '80px',
-                minHeight: isSelected ? '96px' : '80px'
-            }}
-        >
-            <Icon size={iconSize} />
-        </button>
-    );
-};
+        <section>
+            <div className="mb-16">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                    OKR Status
+                </h2>
+            </div>
+            <div className="flex gap-6">
 
-const StatusBadge = ({ status } : any) => {
-    let badgeClasses = '';
-    switch (status) {
-        case 'Achieved':
-            badgeClasses = 'bg-purple-700 text-white';
-            break;
-        case 'On Track':
-            badgeClasses = 'bg-purple-100 text-purple-700';
-            break;
-        case 'At Risk':
-            badgeClasses = 'bg-red-100 text-red-700';
-            break;
-        default:
-            badgeClasses = 'bg-gray-200 text-gray-800';
-    }
-
-    return (
-        <div className={`w-28 px-4 py-2 text-center text-sm font-medium ${badgeClasses}`}>
-            {status}
-        </div>
-    );
-};
-
-const buttonPositions = [
-    { id: 0, gridClass: "col-start-3 row-start-1" }, // Top
-    { id: 1, gridClass: "col-start-1 row-start-3" }, // Top-left
-    { id: 2, gridClass: "col-start-5 row-start-3" }, // Top-right
-    { id: 4, gridClass: "col-start-2 row-start-5" }, // Bottom-left (Icon: Lightbulb, id: 4)
-    { id: 3, gridClass: "col-start-4 row-start-5" }, // Bottom-right (Icon: Users, id: 3)
-];
-
-const ConnectingLines = () => {
-    return (<svg
-        className="absolute inset-0 size-full"
-        viewBox="0 0 320 320"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <line x1="160" y1="0" x2="288" y2="140" stroke="#E5E7EB" strokeWidth="2" /> {/* 0 -> 2 */}
-        <line x1="288" y1="160" x2="224" y2="280" stroke="#E5E7EB" strokeWidth="2" /> {/* 2 -> 3 */}
-        <line x1="224" y1="280" x2="96" y2="280" stroke="#E5E7EB" strokeWidth="2" />  {/* 3 -> 4 */}
-        <line x1="96" y1="280" x2="32" y2="160" stroke="#E5E7EB" strokeWidth="2" />   {/* 4 -> 1 */}
-        <line x1="32" y1="140" x2="160" y2="0" stroke="#E5E7EB" strokeWidth="2" />  {/* 1 -> 0 */}
-    </svg>)
-}
-
-export default function OkrSection() {
-    const [selectedId, setSelectedId] = useState(0); 
-
-    const selectedOkr = okrData.find(item => item.id === selectedId);
-
-    const positionedData = buttonPositions.map(pos => {
-        return {
-            ...okrData.find(d => d.id === pos.id),
-            gridClass: pos.gridClass
-        }
-    });
-
-    return (
-            <div>
-                <h1 className="mb-12 text-3xl font-bold text-gray-900">OKR Status</h1>
-
-                <div className="flex flex-col items-center justify-center gap-16 lg:flex-row lg:gap-8">
-
-                    <div className="flex w-full shrink-0 items-center justify-center lg:w-1/2">
-                        <div className="relative size-80">
-                            <ConnectingLines />
-                            <div className="relative z-10 grid size-80 grid-cols-5 grid-rows-4">
-                                {positionedData.map((item) => (
-                                    <div key={item.id} className={`${item.gridClass} flex items-center justify-center`}>
-                                        <OkrButton
-                                            item={item}
-                                            isSelected={selectedId === item.id}
-                                            onClick={() => setSelectedId(item.id as any)}
-                                        />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="w-full lg:w-1/2">
-                        <h2 className="mb-4 text-xl font-semibold text-gray-900">{selectedOkr?.label}</h2>
-                        <div className="space-y-6">
-                            {selectedOkr?.keyResults.map((kr) => (
-                                <div
-                                    key={kr.text}
-                                    className="flex flex-col items-start justify-between gap-4 border border-gray-100 bg-white p-4 shadow-sm sm:flex-row sm:items-center"
-                                >
-                                    <p className="flex-1 text-base text-gray-700">{kr.text}</p>
-                                    <StatusBadge status={kr.status} />
+                <div className="min-w-[26.25rem] flex flex-col">
+                    {menuItems.map((item: any) => (
+                        <div
+                            key={item.id}
+                            onClick={() => setActiveTab(item.id)}
+                            className={cn(
+                                "group flex items-center justify-between p-6 border-b border-gray-100 cursor-pointer transition-colors group",
+                                activeTab === item.id ? 'bg-gray-200' : 'hover:bg-gray-50'
+                            )}
+                        >
+                            <div className="flex items-start gap-4">
+                                {/* Icon Container */}
+                                <div className="mt-1 text-slate-800">
+                                    <Image
+                                        src={item.iconSrc}
+                                        alt={`${item.title} icon`}
+                                        width={32}
+                                        height={32}
+                                        priority={false}
+                                        quality={20}
+                                    />
                                 </div>
-                            ))}
-                        </div>
-                    </div>
 
+                                {/* Text Content */}
+                                <div>
+                                    <h3 className="font-bold text-slate-900 text-lg mb-2 leading-tight">{item.title}</h3>
+
+                                    {/* Status Indicators */}
+                                    <div className="flex items-center gap-4 text-xs font-medium">
+                                        {/* Achieved (Green) */}
+                                        <div className="flex items-center gap-1 text-bosch_green">
+                                            <div className="bg-bosch_green text-white p-[1px]">
+                                                <Image src={"/svg/okrStatusIcons/achievedIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                                            </div>
+                                            <span className={cn(item.stats.achieved === '-' && 'text-slate-400')}>
+                                                {activeTab === item.id && (item.stats.achieved === '-' ? 'Achieved: -' : `Achieved: ${item.stats.achieved}`)}
+                                                {activeTab !== item.id && item.stats.achieved}
+                                            </span>
+                                        </div>
+
+                                        {/* On Track (Blue) */}
+                                        <div className="flex items-center gap-1 text-sky-600">
+                                            <div className="bg-sky-600  p-[1px]">
+                                                <Image src={"/svg/okrStatusIcons/onTrackIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                                            </div>
+                                            <span className={cn(item.stats.onTrack === '-' && 'text-slate-400')}>
+                                                {activeTab === item.id && (item.stats.onTrack === '-' ? 'On Track: -' : `On Track: ${item.stats.onTrack}`)}
+                                                {activeTab !== item.id && item.stats.onTrack}
+
+                                            </span>
+                                        </div>
+
+                                        {/* In Progress (Red) */}
+                                        <div className="flex items-center gap-1 text-red-500">
+                                            <div className="bg-red-500 p-[1px]">
+                                                <Image src={"/svg/okrStatusIcons/inProgressIcon.svg"} width={10} height={10} alt="In Progress Logo" className='size-3' quality={5} priority={false} />
+                                            </div>
+                                            <span className={cn(item.stats.inProgress === '-' && 'text-slate-400')}>
+                                                {activeTab === item.id && (item.stats.inProgress === '-' ? 'In Progress: -' : `In Progress: ${item.stats.inProgress}`)}
+                                                {activeTab !== item.id && item.stats.inProgress}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Arrow */}
+                            <ArrowRight className={cn("text-slate-400 group-hover:text-bosch_purple", activeTab == item.id && 'text-bosch_teal')} size={20} />
+                        </div>
+                    ))}
+                </div>
+
+                {/* RIGHT CONTENT PANEL */}
+                <div className="flex-1 bg-gray-200 p-10 overflow-y-auto">
+                    {activeTab === 1 && (
+                        <CustomerSatisfaction />
+                    )}
+                    {activeTab === 2 && (
+                        <BusinessGrowth />
+                    )}
+                    {activeTab === 3 && (
+                        <ValueOfService />
+                    )}
+                    {activeTab === 4 && (
+                        <OrganizationCapability />
+                    )}
+                    {activeTab === 5 && (
+                        <Digitalization />
+                    )}
                 </div>
             </div>
-    );
+        </section>
+    )
 }
+
+const BusinessGrowth = () => {
+    return (<div className="space-y-10">
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective: To expand business portfolio/ customer/ scope of services
+            </h3>
+
+            <div className="space-y-6 pl-1">
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="Achieved" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">61.1% YTY Revenue Growth</span>
+                </div>
+
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="Achieved" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">6 new service contracts (DC / ME / 2 DP for MA EA / Consulting 2nd & 3rd SLA)</span>
+                </div>
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">1 concept as of Q2.2025 (P+T+F Concept for MA), 1 Concept in Q4 </span>
+                </div>
+            </div>
+        </section>
+    </div>)
+}
+const ValueOfService = () => {
+    return (<div className="space-y-10">
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective: Service transformation by self-assertiveness collaboration across OSDx
+            </h3>
+
+            <div className="space-y-6 pl-1">
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="Achieved" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">Wiki Project for Process Transparency finished</span>
+                </div>
+
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <div>
+                        <span className="font-bold text-slate-900 ">Progress:</span>
+                        <ul className="list-disc list-outside ml-4 space-y-1 text-slate-700">
+                            <li>YTD %container utilization from HcP to K25M average 52.4% (compared 38% in 2024).</li>
+                            <li>%Container utilization from LAFIEN average 74% (compared to 41%)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">1:1 interview with DP (Jia Guijun) / SP (Chen Juan) / SMS4 (Yan Xiaolei) / SLC (Duan Dan)</span>
+                </div>
+            </div>
+        </section>
+    </div>)
+}
+const Digitalization = () => {
+    return (<div className="space-y-10">
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective: Enhance digital awareness productivity & customer-centric value creation
+            </h3>
+
+            <div className="space-y-6 pl-1">
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">Digi-awareness successfully kick off 5/6 session</span>
+                </div>
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="In Progress" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">0.7/2.5 HCs saved by Q2.2025</span>
+                </div>
+                <div className="flex items-start gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">2 success stories  in digitalization by Q2.2025 (PS/LOP1-JP & VM/LOP1-JP)</span>
+                </div>
+            </div>
+        </section>
+    </div>)
+}
+const CustomerSatisfaction = () => {
+    return (<div className="space-y-10">
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective 1: Gain better understanding about insights in customer satisfaction
+            </h3>
+
+            <div className="space-y-3 pl-1">
+                {/* Row 1 */}
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">62/80 VoCs Collected</span>
+                </div>
+
+                {/* Row 2 */}
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">4.8/5 Rating on VoCs</span>
+                </div>
+            </div>
+        </section>
+
+        {/* Objective 2 */}
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective 2: To become trusted strategic logistics partner in APAC region
+            </h3>
+
+            <div className="flex items-start gap-3 pl-1">
+                <div className="mt-1">
+                    <StatusBadge status="On Track" showStatus />
+                </div>
+                <div className="flex items-start gap-3 mt-1">
+                    <ArrowRight size={14} className=" mt-1" />
+                    <div>
+                        <span className="font-bold text-slate-900 block mb-2">Progress:</span>
+                        <ul className="list-disc list-outside ml-4 space-y-1 text-slate-700">
+                            <li>Completed 1 UX Project & 3 UXcellent workshops.</li>
+                            <li>2 new UX/UI designers from Digi team</li>
+                            <li>Maintain 100% internal associates finished UX0</li>
+                            <li>UX Champion Lead join UX ML4 audit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>)
+}
+const OrganizationCapability = () => {
+    return (<div className="space-y-10">
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective 1: Develop open, continuous & proactive learn culture
+            </h3>
+
+            <div className="space-y-3 pl-1">
+                {/* Row 1 */}
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="Achieved" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">7% capacity already dedicated to L&D Activities by Q2.2025</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 className="text-lg font-medium text-slate-800 mb-4">
+                Objective 2: Build a high performing / future ready team in organization
+            </h3>
+
+            <div className="space-y-3 pl-1">
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="Achieved" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">Competency Matric completed Q3.2025</span>
+                </div>
+                <div className="flex items-center gap-3">
+                    <StatusBadge status="On Track" showStatus />
+                    <ArrowRight size={14} className="" />
+                    <span className="font-bold text-slate-900">Progress:</span>
+                    <span className="text-slate-700">12 associated joined the Proxy Matching Project</span>
+                </div>
+            </div>
+        </section>
+
+    </div>)
+}
+
+const StatusBadge = ({ status, showStatus = false }: { status: "On Track" | "In Progress" | "Achieved", showStatus: boolean }) => (
+    <span className="inline-flex items-center gap-1.5 font-medium text-sm min-w-fit">
+        {
+            status == "Achieved" && (
+                <div className="flex items-center gap-1 text-bosch_green">
+                    <div className="bg-bosch_green text-white p-[1px]">
+                        <Image src={"/svg/okrStatusIcons/achievedIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                    </div>
+                    <span className='text-bosch_green'>{showStatus && status}</span>
+                </div>
+            )
+        }
+        {
+            status == "On Track" && (
+                <div className="flex items-center gap-1 text-bosch_blue">
+                    <div className="bg-bosch_blue text-white p-[1px]">
+                        <Image src={"/svg/okrStatusIcons/onTrackIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                    </div>
+                    <span className='text-bosch_blue'>{showStatus && status}</span>
+                </div>
+            )
+        }
+        {
+            status == "In Progress" && (
+                <div className="flex items-center gap-1 text-red-500">
+                    <div className="bg-red-500 text-white p-[1px]">
+                        <Image src={"/svg/okrStatusIcons/inProgressIcon.svg"} width={10} height={10} alt="In Progress Logo" className='size-3' quality={5} priority={false} />
+                    </div>
+                    <span className='text-red-500'>{showStatus && status}</span>
+                </div>
+            )
+        }
+    </span>
+)
+
+export default DashboardComponent

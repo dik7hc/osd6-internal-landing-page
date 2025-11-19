@@ -2,6 +2,7 @@
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import Header from '@/components/header';
+import { useRouter } from 'next/navigation';
 
 const tabsData = [
     {
@@ -54,8 +55,12 @@ const tabActiveColors: Record<number, string> = {
 
 const ServicePlanningHeader = () => {
     const [tab, setTab] = useState(0)
+    const router = useRouter()
 
     const handleClickTab = (id: number) => {
+        if (id == 3) {
+            router.push("/our-activities")
+        }
         if(id == tab) {
             setTab(0)
             return

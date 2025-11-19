@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 py-20 text-center">
         <h1 className="font-bold text-gray-900">
           <div className="text-4xl tracking-widest">We Are</div>
-          <div className="mt-1 text-2xl tracking-[0.2em]">GENERAL SERVICE</div>
+          <div className="mt-1 text-2xl font-thin tracking-[0.2em]">GENERAL SERVICE</div>
         </h1>
         <div className="my-12">
           <Logo />

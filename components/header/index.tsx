@@ -7,7 +7,7 @@ const Header = ({
     children?: React.ReactNode;
 }>) => {
     return (
-        <div className="sticky top-0 z-50 w-screen bg-background shadow-sm">
+        <div className="sticky top-0 z-50 bg-background shadow-sm">
             <HeaderBg />
             <header className="relative mx-auto max-w-7xl bg-background ">
 
@@ -36,8 +36,6 @@ const Header = ({
                             className="scale-75"
                         />
                     </Link>
-                    {/* <Divider orientation="vertical" className="bg-[#7cb305] h-8" /> */}
-
                 </div>
 
             </header>

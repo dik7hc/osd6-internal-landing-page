@@ -6,6 +6,7 @@ import Highlights from "@/components/hightlights";
 import OkrSection from "@/components/okr";
 import TeamActivities from "@/components/opex";
 import { Metadata } from "next";
+import ServicePlanningHeader from "./service-planning/ServicePlanningHeader";
 
 export const metadata: Metadata = {
   title: "GS/OSD | Bosch tại Việt Nam",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
+      <ServicePlanningHeader />
       <main>
         <div className="mx-auto mb-0 max-w-7xl px-4 py-16 sm:px-6 md:mb-10 lg:px-8 ">
           <HeroSection />
@@ -50,13 +51,13 @@ export default function Home() {
           <OkrSection />
         </div>
         <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" >
-          <TeamActivities />
-        </div>
-        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" >
           <OrganizationChart />
         </div>
+        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" >
+          <TeamActivities />
+        </div>
       </main>
-      <Footer isHomePage/>
+      <Footer />
     </>
   );
 }

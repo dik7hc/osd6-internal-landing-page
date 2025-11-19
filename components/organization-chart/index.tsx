@@ -1,11 +1,12 @@
 'use client'
 import React, { useState } from 'react'
-import { Box } from 'lucide-react'
+import Image from 'next/image'
 
 interface Member {
     name: string
     id: string
     role: string
+    image: string
 }
 
 interface DepartmentData {
@@ -17,6 +18,7 @@ interface Manager {
     name: string
     id: string
     title: string
+    image: string
 }
 
 interface Organization {
@@ -31,16 +33,17 @@ const organizationData: Organization[] = [
             name: 'Ngo Anh Quan',
             id: 'GS/OSD6-APAC23 | GS/PSD63',
             title: 'Logistics Planning, Operations, and Digitalization Manager',
+            image: '/images/avatar-placeholder.png',
         },
         departments: [
             {
                 name: 'Planning',
                 teams: [
                     [
-                        { name: 'Nguyen Duong Hoai PHUONG', id: 'VM-JP', role: 'Source Planning' },
-                        { name: 'Tran Minh Anh THU', id: 'EM-CA, IPO-JP', role: 'Passthrough Planning' },
-                        { name: 'Nguyen Tran Ngoc ANH', id: 'PS-JP', role: 'Source Planning' },
-                        { name: 'Trinh Thi Thien KIM', id: 'MusP/LDP-JP', role: 'Source Planning' },
+                        { name: 'Nguyen Duong Hoai PHUONG', id: 'VM-JP', role: 'Source Planning', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tran Minh Anh THU', id: 'EM-CA, IPO-JP', role: 'Passthrough Planning', image: '/images/avatar-placeholder.png' },
+                        { name: 'Nguyen Tran Ngoc ANH', id: 'PS-JP', role: 'Source Planning', image: '/images/avatar-placeholder.png' },
+                        { name: 'Trinh Thi Thien KIM', id: 'MusP/LDP-JP', role: 'Source Planning', image: '/images/avatar-placeholder.png' },
                     ],
                 ],
             },
@@ -48,17 +51,17 @@ const organizationData: Organization[] = [
                 name: 'Operations',
                 teams: [
                     [
-                        { name: 'Ly My HAN', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Tran Duc THAO', id: 'PS-JP & VM-JP', role: 'Logistics Operations' },
-                        { name: 'Le Van KHOA', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Tran Thi THUY', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Nguyen Thi My DUYEN', id: 'GS/OSD1-JP', role: 'Logistics Operations' },
+                        { name: 'Ly My HAN', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tran Duc THAO', id: 'PS-JP & VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Le Van KHOA', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tran Thi THUY', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Nguyen Thi My DUYEN', id: 'GS/OSD1-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
                     ],
                     [
-                        { name: 'Lam Duc KHOA', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Bui Tu Anh THU', id: 'PS-JP', role: 'Logistics Operations' },
-                        { name: 'Nguyen Van TRONG', id: 'ME-JP', role: 'Logistics Operations' },
-                        { name: 'Nguyen Thuy VY', id: 'IPO-JP', role: 'Logistics Operations' },
+                        { name: 'Lam Duc KHOA', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Bui Tu Anh THU', id: 'PS-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Nguyen Van TRONG', id: 'ME-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Nguyen Thuy VY', id: 'IPO-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
                     ],
                 ],
             },
@@ -66,9 +69,9 @@ const organizationData: Organization[] = [
                 name: 'Digitalization',
                 teams: [
                     [
-                        { name: 'Tran Ngoc DAN', id: 'GS/OSD6-APAC2', role: 'DA & Digitalization' },
-                        { name: 'Phan Thi Ha GIANG', id: 'GS/PSD63', role: 'DA & Digitalization' },
-                        { name: 'Dinh Dang KHOA', id: 'GS/PSD63', role: 'DA & Digitalization' },
+                        { name: 'Tran Ngoc DAN', id: 'GS/OSD6-APAC2', role: 'DA & Digitalization', image: '/images/avatar-placeholder.png' },
+                        { name: 'Phan Thi Ha GIANG', id: 'GS/PSD63', role: 'DA & Digitalization', image: '/images/avatar-placeholder.png' },
+                        { name: 'Dinh Dang KHOA', id: 'GS/PSD63', role: 'DA & Digitalization', image: '/images/avatar-placeholder.png' },
                     ],
                 ],
             },
@@ -79,16 +82,17 @@ const organizationData: Organization[] = [
             name: 'Ngo Anh Quan',
             id: 'GS/OSD6-APAC23 | GS/PSD632',
             title: 'Logistics Planning, Operations, and Digitalization Manager',
+            image: '/images/avatar-placeholder.png',
         },
         departments: [
             {
                 name: 'Planning',
                 teams: [
                     [
-                        { name: 'Ly My HAN', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Tran Duc THAO', id: 'PS-JP & VM-JP', role: 'Logistics Operations' },
-                        { name: 'Le Van KHOA', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Tran Thi THUY', id: 'VM-JP', role: 'Logistics Operations' },
+                        { name: 'Ly My HAN', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tran Duc THAO', id: 'PS-JP & VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Le Van KHOA', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tran Thi THUY', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
                     ],
                 ],
             },
@@ -96,11 +100,11 @@ const organizationData: Organization[] = [
                 name: 'Operations',
                 teams: [
                     [
-                        { name: 'Lam Duc KHOA', id: 'VM-JP', role: 'Logistics Operations' },
-                        { name: 'Bui Tu Anh THU', id: 'PS-JP', role: 'Logistics Operations' },
-                        { name: 'Nguyen Van TRONG', id: 'ME-JP', role: 'Logistics Operations' },
-                        { name: 'Nguyen Thuy VY', id: 'IPO-JP', role: 'Logistics Operations' },
-                        { name: 'Tong Uyen NHI', id: 'PS-JP', role: 'Logistics Operations' },
+                        { name: 'Lam Duc KHOA', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Bui Tu Anh THU', id: 'PS-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Nguyen Van TRONG', id: 'ME-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Nguyen Thuy VY', id: 'IPO-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tong Uyen NHI', id: 'PS-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
                     ],
                 ],
             },
@@ -108,11 +112,11 @@ const organizationData: Organization[] = [
                 name: 'Digitalization',
                 teams: [
                     [
-                        { name: 'Tran Ngoc DAN', id: 'GS/OSD6-APAC2', role: 'DA & Digitalization' },
-                        { name: 'Phan Thi Ha GIANG', id: 'GS/PSD63', role: 'DA & Digitalization' },
-                        { name: 'Dinh Dang KHOA', id: 'GS/PSD63', role: 'DA & Digitalization' },
-                        { name: 'Vo Thinh VUONG', id: 'GS/PSD63', role: 'DA & Digitalization Intern' },
-                        { name: 'Thai Phuc TIEN', id: 'GS/PSD63', role: 'DA & Digitalization Intern' },
+                        { name: 'Tran Ngoc DAN', id: 'GS/OSD6-APAC2', role: 'DA & Digitalization', image: '/images/avatar-placeholder.png' },
+                        { name: 'Phan Thi Ha GIANG', id: 'GS/PSD63', role: 'DA & Digitalization', image: '/images/avatar-placeholder.png' },
+                        { name: 'Dinh Dang KHOA', id: 'GS/PSD63', role: 'DA & Digitalization', image: '/images/avatar-placeholder.png' },
+                        { name: 'Vo Thinh VUONG', id: 'GS/PSD63', role: 'DA & Digitalization Intern', image: '/images/avatar-placeholder.png' },
+                        { name: 'Thai Phuc TIEN', id: 'GS/PSD63', role: 'DA & Digitalization Intern', image: '/images/avatar-placeholder.png' },
                     ],
                 ],
             },
@@ -146,7 +150,13 @@ const Department = ({ department }: DepartmentProps) => (
                 <div key={teamIndex} className="flex-1 space-y-4">
                     {team.map((member, memberIndex) => (
                         <div key={memberIndex} className="group flex items-center gap-3">
-                            <Box className="size-10 shrink-0 text-slate-800" strokeWidth={1} />
+                            <Image
+                                src={member.image}
+                                alt={member.name}
+                                width={40}
+                                height={40}
+                                className="size-10 shrink-0 rounded-full object-cover"
+                            />
                             <div>
                                 <FormattedName name={member.name} />
                                 <p className="text-xs font-semibold text-bosch_blue">{member.id}</p>
@@ -187,7 +197,13 @@ const OrganizationChart = () => {
                   ${isActive ? 'scale-105 border-sky-500' : 'border-gray-300 hover:border-sky-400'}
                 `}
                             >
-                                <Box className="size-16 shrink-0 text-slate-800" strokeWidth={1} />
+                                <Image
+                                    src={org.manager.image}
+                                    alt={org.manager.name}
+                                    width={64}
+                                    height={64}
+                                    className="size-16 shrink-0 rounded-full object-cover"
+                                />
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900">{org.manager.name}</h3>
                                     <p className="mt-1 text-xs font-semibold text-bosch_blue">{org.manager.id}</p>

@@ -1,38 +1,33 @@
 import React from 'react';
-import {
-    ClipboardList,
-    Spline,
-    Network,
-    DatabaseBackup,
-    MapPin,
-    ArrowRight
-} from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const servicesData = [
     {
-        icon: ClipboardList,
+        icon: '/svg/ourServicesIcons/planning.svg',
         title: 'Planning',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Optimizing your supply chain flow with accurate demand planning and timely source planning.',
     },
     {
-        icon: Spline,
+        icon: '/svg/ourServicesIcons/inboundControl.svg',
         title: 'Inbound Control',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Managing the entire process of goods, from shipment tracking to raising Istar and handling goods receive.',
     },
     {
-        icon: Network,
+        icon: '/svg/ourServicesIcons/dataAnalysis.svg',
         title: 'Data Analysis',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Transform complex operational data into actional insights, helping you identify inefficiencies and make data-driven decisions for continuous improvement.',
     },
     {
-        icon: DatabaseBackup,
+        icon: '/svg/ourServicesIcons/masterData.svg',
         title: 'Master Data',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Establish, maintain, and govern a reliable foundation of material data, guaranteeing a consistent and stable operations work flow.',
     },
     {
-        icon: MapPin,
+        icon: '/svg/ourServicesIcons/logisticsProjects.svg',
         title: 'Logistics Projects',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        description: 'Provide expertise to enhance your overall logistics capabilities and performance.',
     },
 ];
 
@@ -49,20 +44,25 @@ const Highlights = () => {
 
                 {/* Services Grid */}
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5">
-                    {servicesData.map((service) => (
+                    {servicesData.map((service, index) => (
                         <div
                             key={service.title}
-                            className="flex flex-col bg-white p-8 transition-shadow duration-300 hover:shadow-lg"
+                            className="flex  relative flex-col bg-white p-8 transition-shadow duration-300 hover:shadow-lg group hover:border hover:border-bosch_blue"
                         >
+                            <div className='h-3 w-full hidden inset-0 bg-bosch_blue absolute group-hover:block'></div>
                             {/* Icon */}
-                            <service.icon
-                                className="size-12 text-blue-600"
-                                strokeWidth={1.5}
-                                aria-hidden="true"
+                            <Image
+                                src={service.icon}
+                                alt={`${service.title} icon`}
+                                width={48}
+                                height={48}
+                                quality={20}
+                                priority={false}
+                                className={cn({ "h-12": index == 4 || index == 0 })}
                             />
 
                             {/* Content - pushed to the bottom */}
-                            <div className="mt-auto pt-10">
+                            <div className="pt-10">
                                 <div className="flex items-start justify-between">
                                     <h3 className="pr-4 text-xl font-medium leading-tight text-gray-900">
                                         {service.title}
