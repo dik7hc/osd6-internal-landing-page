@@ -173,7 +173,7 @@ const organizationData: Organization[] = [
 
                         // Cột 1: Master Data Management & Management Reporting
 
-                        { name: 'TBA', id: 'CN/EA', role: 'Master Data Management', image: '' },
+                        { name: 'TBA', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                         { name: 'Thai Ho Duy PHUONG', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763618902/Thai_Ho_Duy_Phuong_mumou9.jpg' },
 
@@ -185,7 +185,7 @@ const organizationData: Organization[] = [
 
                         // Cột 2: Logistics Operations
 
-                        { name: 'TBA', id: 'EA', role: 'Logistics Operations', image: '' },
+                        { name: 'TBA', id: 'EA', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                         { name: 'Tran Vu Ngoc TRAN', id: 'CN', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763609812/Tran_Vu_Ngoc_Tran_eu0oph.jpg' },
 
@@ -241,7 +241,7 @@ const organizationData: Organization[] = [
 
                         { name: 'Nguyen Thanh TUNG', id: 'ZO-Thailand/Singapore', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557591/Nguyen_Thanh_Tung_pk99xq.jpg' },
 
-                        { name: 'TBA', id: 'ZO', role: 'Demand Planning', image: '' },
+                        { name: 'TBA', id: 'ZO', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                     ]
 
