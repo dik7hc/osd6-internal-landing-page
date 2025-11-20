@@ -95,9 +95,9 @@ const activitiesData: ActivityData[] = [
 ];
 
 interface ServiceHighlightPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 const PageBreadCrumb = ({ formattedSlug }: { formattedSlug : string}) => {
@@ -118,8 +118,8 @@ const PageBreadCrumb = ({ formattedSlug }: { formattedSlug : string}) => {
     </Breadcrumb>)
 }
 
-const ServiceHighlightPage = ({ params }: ServiceHighlightPageProps) => {
-    const { slug } = params;
+const ServiceHighlightPage = async ({ params }: ServiceHighlightPageProps) => {
+    const { slug } = await params;
     
     // Find the activity data matching the slug
     const activity = activitiesData.find(a => a.slug === slug);

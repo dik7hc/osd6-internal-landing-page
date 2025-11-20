@@ -77,7 +77,7 @@ const ServicePortfolioPage = () => {
                 </p> */}
             </section>
             <div className='mb-20 flex flex-col gap-12 lg:gap-20'>
-                {Mock.Solutions.map((sol, i) => <Solution key={i} {...sol} />)}
+                {/* {Mock.Solutions.map((sol, i) => <Solution key={i} {...sol} />)} */}
             </div>
         </div>
     </>

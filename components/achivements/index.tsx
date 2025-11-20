@@ -46,11 +46,11 @@ const Testimonials = () => {
         </div>
         <p className="mx-auto mb-8 max-w-5xl text-center text-gray-600">
             We honor and appreciate our customers’ feedback, which motivates us to continuously improve and serve with excellence.</p>
-            <InfiniteMovingCards
-                items={Mock.Testimonials}
+            {/* <InfiniteMovingCards
+                // items={Mock.Testimonials}
                 direction="left"
                 speed="slow"
-            />
+            /> */}
     </section>
 }
 const Achievements = () => {
