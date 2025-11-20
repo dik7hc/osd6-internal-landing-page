@@ -10,7 +10,7 @@ const Activities: ActivityData[] = [
     date: "October 15, 2024",
     author: "Pham Hong Ngoc ",
     mainImages: [
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763569492/TransPlan_1_fkg3hn.jpg"
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763626715/TransPlan_1_fkg3hn.jpg"
     ],
     mainImageCaption: "UXcellent1",
     content: [
