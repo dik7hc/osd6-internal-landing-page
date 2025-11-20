@@ -22,25 +22,27 @@ const PageBreadCrumb = () => {
         </BreadcrumbList>
     </Breadcrumb>)
 }
-export default function OurActivitiesPage(){
+export default function OurActivitiesPage() {
     return (
-        <div className=" h-screen">
+        <div >
             <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
                 <div className="p-4">
                     <PageBreadCrumb />
-                    <section className="">
+                    <section className="h-screen">
                         <div className="mb-10">
                             <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                                 Our Activities
                             </h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {Mock.Activities.map((event) => (
+                            {Mock.Activities.map((activity, index) => (
                                 <ExperienceDayCard
-                                    key={event.id}
-                                    imageSrc={event.imageSrc}
-                                    description={event.description}
-                                    title={event.title}
+                                    key={index}
+                                    content={activity.content}
+                                    mainImageCaption={activity.mainImageCaption}
+                                    mainImages={activity.mainImages}
+                                    slug={activity.slug}
+                                    title={activity.title}
                                 />
                             ))}
                         </div>
