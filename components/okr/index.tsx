@@ -258,7 +258,7 @@ const CustomerSatisfaction = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="" />
                     <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">62/80 VoCs Collected</span>
+                    <span className="text-slate-700">68/80 VoCs Collected</span>
                 </div>
 
                 {/* Row 2 */}

@@ -17,12 +17,12 @@ const Header = ({
                     </Button> */}
                     <div className="flex items-center">
                         <Image
-                            width={120}
-                            height={80}
+                            width={55}
+                            height={40}
                             src="/svg/logo.svg"
                             alt="Logo"
                             quality={20}
-                            className="-ml-7 scale-75" //-ml-7
+                            className=" scale-75" //-ml-7
                         />
                         {children}
                     </div>
