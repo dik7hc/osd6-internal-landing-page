@@ -41,9 +41,9 @@ const organizationData: Organization[] = [
                 teams: [
                     [
                         { name: 'Nguyen Duong Hoai PHUONG', id: 'VM-JP', role: 'Source Planning', image: '/images/avatar-placeholder.png' },
-                        { name: 'Tran Minh Anh THU', id: 'EM-CA, IPO-JP', role: 'Passthrough Planning', image: '/images/avatar-placeholder.png' },
-                        { name: 'Nguyen Tran Ngoc ANH', id: 'PS-JP', role: 'Source Planning', image: '/images/avatar-placeholder.png' },
-                        { name: 'Trinh Thi Thien KIM', id: 'MusP/LDP-JP', role: 'Source Planning', image: '/images/avatar-placeholder.png' },
+                        { name: 'Tran Minh Anh THU', id: 'EM-CA, IPO-JP', role: 'Passthrough Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557597/Phan_Thi_Na_rc5ine.png' },
+                        { name: 'Nguyen Tran Ngoc ANH', id: 'PS-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557598/Tran_Vu_Ngoc_Tran_eu0oph.png' },
+                        { name: 'Trinh Thi Thien KIM', id: 'MusP/LDP-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557598/Tran_Vu_Ngoc_Tran_eu0oph.png' },
                     ],
                 ],
             },
@@ -51,7 +51,7 @@ const organizationData: Organization[] = [
                 name: 'Operations',
                 teams: [
                     [
-                        { name: 'Ly My HAN', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
+                        { name: 'Ly My HAN', id: 'VM-JP', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557586/Vuong_Kim_Lien_snzwc6.jpg' },
                         { name: 'Tran Duc THAO', id: 'PS-JP & VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
                         { name: 'Le Van KHOA', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
                         { name: 'Tran Thi THUY', id: 'VM-JP', role: 'Logistics Operations', image: '/images/avatar-placeholder.png' },
@@ -82,7 +82,7 @@ const organizationData: Organization[] = [
             name: 'Ngo Anh Quan',
             id: 'GS/OSD6-APAC23 | GS/PSD632',
             title: 'Logistics Planning, Operations, and Digitalization Manager',
-            image: '/images/avatar-placeholder.png',
+            image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557595/Pham_Thuy_Hang_skw1oi.png',
         },
         departments: [
             {

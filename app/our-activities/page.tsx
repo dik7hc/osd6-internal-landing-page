@@ -1,4 +1,4 @@
-import ExperienceSection from "@/components/opex";
+import ExperienceSection, { ExperienceDayCard } from "@/components/opex";
 import {
     Breadcrumb,
     BreadcrumbItem,
@@ -7,6 +7,7 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import Mock from "@/lib/mock-data";
 
 const PageBreadCrumb = () => {
     return (<Breadcrumb className="mb-6">
@@ -16,19 +17,34 @@ const PageBreadCrumb = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-                <BreadcrumbLink href="/our-services">Our Activities</BreadcrumbLink>
+                <BreadcrumbLink href="/our-activities">Our Activities</BreadcrumbLink>
             </BreadcrumbItem>
         </BreadcrumbList>
     </Breadcrumb>)
 }
 export default function OurActivitiesPage(){
     return (
-        <div className="bg-gray-200">
+        <div className=" h-screen">
             <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
                 <div className="p-4">
                     <PageBreadCrumb />
-                    <ExperienceSection />
-                    <ExperienceSection />
+                    <section className="">
+                        <div className="mb-10">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                                Our Activities
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {Mock.Activities.map((event) => (
+                                <ExperienceDayCard
+                                    key={event.id}
+                                    imageSrc={event.imageSrc}
+                                    description={event.description}
+                                    title={event.title}
+                                />
+                            ))}
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>

@@ -170,10 +170,10 @@ const BusinessGrowth = () => {
                     <span className="text-slate-700">6 new service contracts (DC / ME / 2 DP for MA EA / Consulting 2nd & 3rd SLA)</span>
                 </div>
                 <div className="flex items-start gap-3">
-                    <StatusBadge status="On Track" showStatus />
+                    <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="" />
                     <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">1 concept as of Q2.2025 (P+T+F Concept for MA), 1 Concept in Q4 </span>
+                    <span className="text-slate-700">1 concept as of Q2.2025 (P+T+F Concept for MA), 1 Concept in Q4 - total solution for JP (operation management + digi)</span>
                 </div>
             </div>
         </section>
@@ -233,7 +233,7 @@ const Digitalization = () => {
                     <StatusBadge status="In Progress" showStatus />
                     <ArrowRight size={14} className="" />
                     <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">0.7/2.5 HCs saved by Q2.2025</span>
+                    <span className="text-slate-700">2/2.5 HCs saved by Q2.2025</span>
                 </div>
                 <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
