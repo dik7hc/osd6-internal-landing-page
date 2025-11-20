@@ -21,7 +21,7 @@ export const ExperienceDayCard = ({ content, mainImageCaption, mainImages, slug,
                     className="w-full h-auto aspect-[4/3] object-cover"
                 />
                 <div className="p-8">
-                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                    <h3 className="text-3xl font-bold text-slate-900 leading-tight line-clamp-2">
                         {title}
                     </h3>
                 </div>
@@ -33,7 +33,7 @@ export const ExperienceDayCard = ({ content, mainImageCaption, mainImages, slug,
                    transform-gpu translate-y-4 group-hover:translate-y-0
                    transition-all duration-300 ease-in-out"
             >
-                <h3 className="text-4xl font-bold text-slate-900 leading-tight p-8 pb-4">
+                <h3 className="text-4xl font-bold text-slate-900 leading-tight p-8 line-clamp-2" title={title}>
                     {title}
                 </h3>
                 <div className="bg-gray-300 h-full px-6 py-4 flex flex-col justify-between">
