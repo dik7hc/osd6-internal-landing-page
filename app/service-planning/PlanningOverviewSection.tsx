@@ -171,7 +171,7 @@ const PlanningOverviewSection = () => {
                     })}
                     onClick={() => selectTab(3)}
                 >
-                    Related Links
+                    Process links
                 </div>
             </nav>
             <div className="bg-gray-200 p-4 pt-10">

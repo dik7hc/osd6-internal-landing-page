@@ -5,12 +5,12 @@ const HeroSection = () => {
   return (
     <section className="relative flex items-center justify-center">
       <div
-        className="absolute inset-0 z-0 bg-contain bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-contain bg-center max-h-[90vh] bg-no-repeat"
         style={{
           backgroundImage: `url(/svg/backgroundLogo.svg)`,
         }}
       ></div>
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 py-20 text-center">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-4 py-10 2xl:py-20 text-center">
         <h1 className="font-bold text-gray-900">
           <div className="text-4xl tracking-widest">We Are</div>
           <div className="mt-1 text-2xl font-thin tracking-[0.2em]">GENERAL SERVICE</div>

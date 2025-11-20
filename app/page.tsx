@@ -39,7 +39,7 @@ export default function Home() {
     <>
       <ServicePlanningHeader />
       <main>
-        <div className="mx-auto mb-0 max-w-7xl px-4 py-16 sm:px-6 md:mb-10 lg:px-8 ">
+        <div className="mx-auto mb-0 max-w-7xl px-4 lg:py-0 2xl:py-16 sm:px-6 md:mb-10 lg:px-8 ">
           <HeroSection />
         </div>
         <div className="bg-slate-300 py-10">

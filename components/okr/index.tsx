@@ -279,7 +279,7 @@ const CustomerSatisfaction = () => {
 
             <div className="flex items-start gap-3 pl-1">
                 <div className="mt-1">
-                    <StatusBadge status="On Track" showStatus />
+                    <StatusBadge status="Achieved" showStatus />
                 </div>
                 <div className="flex items-start gap-3 mt-1">
                     <ArrowRight size={14} className=" mt-1" />
