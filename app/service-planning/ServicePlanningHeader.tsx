@@ -20,6 +20,10 @@ const tabsData = [
 ];
 const subTabs1 = [
     {
+        id: 3,
+        label: 'Master Data',
+    },
+    {
         id: 1,
         label: 'Planning',
     },
@@ -27,13 +31,10 @@ const subTabs1 = [
         id: 2,
         label: 'Inbound Control',
     },
-    {
-        id: 3,
-        label: 'Master Data',
-    },
+  
     {
         id: 4,
-        label: 'Data Analysis',
+        label: 'Data Analytics',
     },
     {
         id: 5,

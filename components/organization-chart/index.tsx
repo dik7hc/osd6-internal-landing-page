@@ -37,7 +37,7 @@ const organizationData: Organization[] = [
 
             id: 'GS/OSD6-APAC23 | GS/PSD63',
 
-            title: 'Logistics Planning, Operations, and Digitalization Manager',
+            title: ' Planning, Operations, and Digitalization Manager',
 
             image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557573/Ngo_Anh_Quan_drpmlq.jpg',
 
@@ -165,7 +165,7 @@ const organizationData: Organization[] = [
 
             {
 
-                name: 'APAC21 – OPERATIONS (6)',
+                name: 'Operations',
 
                 teams: [
 
@@ -199,7 +199,7 @@ const organizationData: Organization[] = [
 
             {
 
-                name: 'APAC22 – PLANNING (12)',
+                name: 'Planning',
 
                 teams: [
 
@@ -248,6 +248,46 @@ const organizationData: Organization[] = [
                 ]
 
             }
+
+        ]
+    },
+
+    {
+
+        manager: {
+
+            name: 'Logistics Projects',
+
+            id: 'GS/OSD6-APAC2',
+
+            title: 'Consulting Experts',
+
+            image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557595/Pham_Thuy_Hang_skw1oi.png',
+
+        },
+
+        departments: [
+
+            {
+
+                name: 'Logistics Projects Experts',
+
+                teams: [
+
+                    [
+
+                        {
+                            name: 'Truong Quoc HUNG', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623866/Truong_Quoc_Hung_autxrc.jpg' },
+
+                        { name: 'Ta Thanh TU', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623865/Ta_Thanh_Tu_uheout.jpg' },
+
+                    ]
+
+                ]
+
+            },
+
+         
 
         ]
     }
@@ -333,7 +373,7 @@ const OrganizationChart = () => {
                                 height={64}
                                 className="size-16 shrink-0 rounded-full object-cover"
                             />
-                            <div>
+                            <div className='max-w-52'>
                                 <FormattedName name={org.manager.name} isManager />
                                 <p className="mt-1 text-xs font-semibold text-bosch_blue">{org.manager.id}</p>
                                 <p className="mt-1 text-sm text-gray-700">{org.manager.title}</p>
@@ -343,16 +383,30 @@ const OrganizationChart = () => {
                 })}
             </div>
 
-            <div className="grid w-full grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4">
-                <div className="lg:col-span-1">
+            <div className={cn("grid w-full grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4", {
+                "flex justify-center": activeOrganization.departments.length == 1
+            })}>
+                <div className={cn({
+                    "lg:col-span-1": activeOrganization.departments.length >= 2,
+                    "lg:col-span-4": activeOrganization.departments.length == 1,
+                })}>
                     <Department department={activeOrganization.departments[0]} />
                 </div>
-                <div className="lg:col-span-2">
-                    <Department department={activeOrganization.departments[1]} />
-                </div>
+                {
+                    activeOrganization.departments[1] && 
+                    <div className={cn( {
+                        "lg:col-span-2": activeOrganization.departments.length > 2,
+                        "lg:col-span-3": activeOrganization.departments.length == 2,
+                    })}>
+                        <Department department={activeOrganization.departments[1]} />
+                    </div>
+                }
+                {activeOrganization.departments[2] && 
+
                 <div className="lg:col-span-1">
                     <Department department={activeOrganization.departments[2]} />
                 </div>
+                }
             </div>
         </section>
     )
