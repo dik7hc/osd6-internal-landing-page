@@ -19,7 +19,7 @@ interface Manager {
     name: string
     id: string
     title: string
-    image: string
+    image?: string
 }
 
 interface Organization {
@@ -178,19 +178,9 @@ const organizationData: Organization[] = [
                         { name: 'Thai Ho Duy PHUONG', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763618902/Thai_Ho_Duy_Phuong_mumou9.jpg' },
 
                         { name: 'Pham Minh TUAN', id: 'CN/EA', role: 'Management Reporting', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Minh_Tuan_vkqzpe.png' },
-
-                    ],
-
-                    [
-
-                        // Cột 2: Logistics Operations
-
-                        { name: 'TBA', id: 'EA', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
-
                         { name: 'Tran Vu Ngoc TRAN', id: 'CN', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763609812/Tran_Vu_Ngoc_Tran_eu0oph.jpg' },
 
                         { name: 'Pham Hong NGOC', id: 'EA', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557592/Pham_Hong_Ngoc_ulf9vr.jpg' },
-
                     ]
 
                 ]
@@ -199,7 +189,7 @@ const organizationData: Organization[] = [
 
             {
 
-                name: 'Planning',
+                name: 'Source Planning',
 
                 teams: [
 
@@ -233,6 +223,16 @@ const organizationData: Organization[] = [
 
                     ],
 
+                ]
+
+            },
+            {
+
+                name: 'Demand Planning',
+
+                teams: [
+
+
                     [
 
                         // Cột 3: Demand Planning
@@ -241,9 +241,10 @@ const organizationData: Organization[] = [
 
                         { name: 'Nguyen Thanh TUNG', id: 'ZO-Thailand/Singapore', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557591/Nguyen_Thanh_Tung_pk99xq.jpg' },
 
-                        { name: 'TBA', id: 'ZO', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
+                        // { name: 'TBA', id: 'ZO', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                     ]
+
 
                 ]
 
@@ -262,7 +263,7 @@ const organizationData: Organization[] = [
 
             title: 'Consulting Experts',
 
-            image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557595/Pham_Thuy_Hang_skw1oi.png',
+            // image?: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557595/Pham_Thuy_Hang_skw1oi.png',
 
         },
 
@@ -276,18 +277,22 @@ const organizationData: Organization[] = [
 
                     [
 
-                        {
-                            name: 'Truong Quoc HUNG', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623866/Truong_Quoc_Hung_autxrc.jpg' },
+                        
 
                         { name: 'Ta Thanh TU', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623865/Ta_Thanh_Tu_uheout.jpg' },
 
+                    ], 
+                    [
+                        {
+                            name: 'Truong Quoc HUNG', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623866/Truong_Quoc_Hung_autxrc.jpg'
+                        },
                     ]
 
                 ]
 
             },
 
-         
+
 
         ]
     }
@@ -366,13 +371,17 @@ const OrganizationChart = () => {
                   ${isActive ? 'scale-105 border-sky-500' : 'border-gray-300 hover:border-sky-400'}
                 `}
                         >
-                            <Image
-                                src={org.manager.image}
-                                alt={org.manager.name}
-                                width={64}
-                                height={64}
-                                className="size-16 shrink-0 rounded-full object-cover"
-                            />
+                            {
+                                org.manager.image ?
+                                <Image
+                                    src={org.manager.image}
+                                    alt={org.manager.name}
+                                    width={64}
+                                    height={64}
+                                    className="size-16 shrink-0 rounded-full object-cover"
+                                />
+                                    : <div className='size-16'></div>
+                            }
                             <div className='max-w-52'>
                                 <FormattedName name={org.manager.name} isManager />
                                 <p className="mt-1 text-xs font-semibold text-bosch_blue">{org.manager.id}</p>
@@ -384,28 +393,28 @@ const OrganizationChart = () => {
             </div>
 
             <div className={cn("grid w-full grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4", {
-                "flex justify-center": activeOrganization.departments.length == 1
+                "lg:grid-cols-2 max-w-xl": activeOrganization.departments.length == 1
             })}>
                 <div className={cn({
                     "lg:col-span-1": activeOrganization.departments.length >= 2,
-                    "lg:col-span-4": activeOrganization.departments.length == 1,
+                    "lg:col-span-2": activeOrganization.departments.length == 1,
                 })}>
                     <Department department={activeOrganization.departments[0]} />
                 </div>
                 {
-                    activeOrganization.departments[1] && 
-                    <div className={cn( {
+                    activeOrganization.departments[1] &&
+                    <div className={cn({
                         "lg:col-span-2": activeOrganization.departments.length > 2,
                         "lg:col-span-3": activeOrganization.departments.length == 2,
                     })}>
                         <Department department={activeOrganization.departments[1]} />
                     </div>
                 }
-                {activeOrganization.departments[2] && 
+                {activeOrganization.departments[2] &&
 
-                <div className="lg:col-span-1">
-                    <Department department={activeOrganization.departments[2]} />
-                </div>
+                    <div className="lg:col-span-1">
+                        <Department department={activeOrganization.departments[2]} />
+                    </div>
                 }
             </div>
         </section>
