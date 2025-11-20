@@ -97,7 +97,7 @@ const ServicePlanningHeader = () => {
                 })}
             </Header>
             <div className={cn("bg-gray-400", tab == 2 ? "" : "hidden")}>
-                <div className='3xl:mx-[60rem] lg:mx-[12rem] flex max-w-7xl lg:w-3/4 justify-center'>
+                <div className='3xl:mx-[60rem] lg:mx-[9.5rem] flex max-w-7xl lg:w-3/4 justify-center'>
                     {tab == 2 && subTabs1.map((subTab) => (
                         <button
                             key={subTab.id}

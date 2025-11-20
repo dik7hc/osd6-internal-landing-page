@@ -173,9 +173,9 @@ const organizationData: Organization[] = [
 
                         // Cột 1: Master Data Management & Management Reporting
 
-                        { name: 'TBA', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                         { name: 'Thai Ho Duy PHUONG', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763618902/Thai_Ho_Duy_Phuong_mumou9.jpg' },
+                        { name: 'Nguyen Hoai THUAN', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                         { name: 'Pham Minh TUAN', id: 'CN/EA', role: 'Management Reporting', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Minh_Tuan_vkqzpe.png' },
                         { name: 'Tran Vu Ngoc TRAN', id: 'CN', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763609812/Tran_Vu_Ngoc_Tran_eu0oph.jpg' },
@@ -199,11 +199,11 @@ const organizationData: Organization[] = [
 
                         { name: 'Le Lam Huu LOC', id: 'ZO-Indonesia', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557589/Le_Lam_Huu_Loc_l2somg.png' },
 
-                        { name: 'Phan Thi NA', id: 'ZO-Malaysia', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557597/Phan_Thi_Na_rc5ine.png' },
-
                         { name: 'Dang Thi Viet HA', id: 'ZO-Thailand', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557588/Dang_Thi_Viet_Ha_pvvfzj.jpg' },
-
+                        { name: 'Phan Thi NA', id: 'ZO-Malaysia', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557597/Phan_Thi_Na_rc5ine.png' },
                         { name: 'Ly Tan DAT', id: 'ZO-Singapore', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557589/Ly_Tan_Dat_krcjmv.png' },
+
+
 
                         { name: 'Nguyen Quoc HUY', id: 'ZO-Philippines', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557590/Nguyen_Quoc_Huy_vkq1bn.png' },
 
@@ -213,13 +213,13 @@ const organizationData: Organization[] = [
 
                         // Cột 2: Source Planning (Khu vực JK & CN)
 
+                        { name: 'Nguyen Thi Thanh MINH', id: 'CN-China', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557592/Nguyen_Thi_Thanh_Minh_lxyb7v.png' },
+                        { name: 'Pham Ngan HA', id: 'CN-China', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
                         { name: 'Pham Ngoc Uyen PHUONG', id: 'JK-Japan', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngoc_Uyen_Phuong_ovy6dd.png' },
 
                         { name: 'Nguyen Duy THANG', id: 'JK-Japan', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557590/Nguyen_Duy_Thang_wz7o59.jpg' },
 
-                        { name: 'Nguyen Thi Thanh MINH', id: 'CN-China', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557592/Nguyen_Thi_Thanh_Minh_lxyb7v.png' },
 
-                        { name: 'Pham Ngan HA', id: 'CN-China', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
 
                     ],
 
@@ -235,13 +235,11 @@ const organizationData: Organization[] = [
 
                     [
 
-                        // Cột 3: Demand Planning
-
-                        { name: 'Bui Thi Thanh NHAN', id: 'CN-China', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557586/Bui_Thi_Thanh_Nhan_mpgckw.png' },
 
                         { name: 'Nguyen Thanh TUNG', id: 'ZO-Thailand/Singapore', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557591/Nguyen_Thanh_Tung_pk99xq.jpg' },
+                        { name: 'Bui Thi Thanh NHAN', id: 'CN-China', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557586/Bui_Thi_Thanh_Nhan_mpgckw.png' },
 
-                        // { name: 'TBA', id: 'ZO', role: 'Demand Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
+
 
                     ]
 
@@ -277,11 +275,11 @@ const organizationData: Organization[] = [
 
                     [
 
-                        
+
 
                         { name: 'Ta Thanh TU', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623865/Ta_Thanh_Tu_uheout.jpg' },
 
-                    ], 
+                    ],
                     [
                         {
                             name: 'Truong Quoc HUNG', id: 'GS/OSD6-APAC2', role: 'Logistics Experts', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763623866/Truong_Quoc_Hung_autxrc.jpg'
@@ -373,13 +371,13 @@ const OrganizationChart = () => {
                         >
                             {
                                 org.manager.image ?
-                                <Image
-                                    src={org.manager.image}
-                                    alt={org.manager.name}
-                                    width={64}
-                                    height={64}
-                                    className="size-16 shrink-0 rounded-full object-cover"
-                                />
+                                    <Image
+                                        src={org.manager.image}
+                                        alt={org.manager.name}
+                                        width={64}
+                                        height={64}
+                                        className="size-16 shrink-0 rounded-full object-cover"
+                                    />
                                     : <div className='size-16'></div>
                             }
                             <div className='max-w-52'>
