@@ -171,6 +171,8 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
                         <div>
                             <a
                                 href={item.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-blue-600 hover:text-bosch_green hover:underline"
                             >
                                 {item.linkText}
