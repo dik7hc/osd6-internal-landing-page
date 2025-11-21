@@ -47,7 +47,7 @@ const Highlights = () => {
             {/* Services Grid */}
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5">
                 {servicesData.map((service, index) => (
-                    <div
+                    <Link href={service.pathname}
                         key={service.name}
                         className="flex  relative flex-col bg-white p-8 transition-shadow duration-300 hover:shadow-lg group hover:border hover:border-bosch_blue"
                     >
@@ -78,7 +78,7 @@ const Highlights = () => {
                                 {service.description}
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
