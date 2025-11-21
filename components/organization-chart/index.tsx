@@ -304,8 +304,8 @@ const FormattedName = ({ name, isManager = false }: FormattedNameProps) => {
     const lastName = parts.pop()
     const firstName = parts.join(' ')
     return (
-        <span className={cn("text-xs text-black transition-colors group-hover:text-bosch_green", isManager && "text-xl")}>
-            {firstName} <strong className="font-bold">{lastName}</strong>
+        <span className={cn("text-xs text-black transition-colors ", isManager && "text-xl")}>
+            {firstName} <strong className="font-bold group-hover:text-bosch_green">{lastName}</strong>
         </span>
     )
 }
