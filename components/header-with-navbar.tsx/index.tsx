@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '@/components/header';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { servicesNavigation } from '@/lib/services-navigation';
 
 const tabsData = [
     {
@@ -21,34 +22,7 @@ const tabsData = [
         pathname: "/our-activities/"
     },
 ];
-const subTabs1 = [
-    {
-        id: 3,
-        label: 'Master Data',
-        pathname: '/our-services/master-data',
-    },
-    {
-        id: 1,
-        label: 'Planning',
-        pathname: '/our-services/planning',
-    },
-    {
-        id: 2,
-        label: 'Inbound Control',
-        pathname: '/our-services/inbound-control',
-    },
-  
-    {
-        id: 4,
-        label: 'Data Analytics',
-        pathname: '/our-services/data-analytics',
-    },
-    {
-        id: 5,
-        label: 'Logistics Projects',
-        pathname: '/our-services/logistics-projects',
-    },
-];
+
 
 const tabHoverColors: Record<number, string> = {
     1: "hover:border-bosch_blue",
@@ -107,7 +81,7 @@ const ServicePlanningHeader = () => {
             </Header>
             <div className={cn("bg-gray-400", tab == 2 ? "" : "hidden")}>
                 <div className='3xl:mx-[39rem] 2xl:mx-[19rem] lg:mx-[9.5rem] flex max-w-7xl lg:w-3/4 justify-center'>
-                    {tab == 2 && subTabs1.map((subTab) => (
+                    {tab == 2 && servicesNavigation.map((subTab) => (
                        <Link key={subTab.id} href={subTab.pathname}>
                             <div
                                 className={cn(" border-b-4 border-transparent px-8 py-[14px] text-gray-900 transition-colors hover:bg-bosch_blue/40 ")}

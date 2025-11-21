@@ -1,34 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { servicesNavigation } from '@/lib/services-navigation';
 
-const servicesData = [{
-    icon: '/svg/ourServicesIcons/masterData.svg',
-    title: 'Master Data',
-    description: 'Establish, maintain, and govern a reliable foundation of material data, guaranteeing a consistent and stable operations work flow.',
-},
-{
-    icon: '/svg/ourServicesIcons/planning.svg',
-    title: 'Planning',
-    description: 'Optimizing your supply chain flow with accurate demand planning and timely source planning.',
-},
-{
-    icon: '/svg/ourServicesIcons/inboundControl.svg',
-    title: 'Inbound Control',
-    description: 'Managing the entire process of goods, from shipment tracking to raising Istar and handling goods receive.',
-},
-{
-    icon: '/svg/ourServicesIcons/dataAnalysis.svg',
-    title: 'Data Analysis',
-    description: 'Transform complex operational data into actional insights, helping you identify inefficiencies and make data-driven decisions for continuous improvement.',
-},
-
-{
-    icon: '/svg/ourServicesIcons/logisticsProjects.svg',
-    title: 'Logistics Projects',
-    description: 'Provide expertise to enhance your overall logistics capabilities and performance.',
-},
+const servicesData = [
+    {
+        ...servicesNavigation[2], // Master Data
+        icon: '/svg/ourServicesIcons/masterData.svg',
+        description: 'Establish, maintain, and govern a reliable foundation of material data, guaranteeing a consistent and stable operations work flow.',
+    },
+    {
+        ...servicesNavigation[0], // Planning
+        icon: '/svg/ourServicesIcons/planning.svg',
+        description: 'Optimizing your supply chain flow with accurate demand planning and timely source planning.',
+    },
+    {
+        ...servicesNavigation[1], // Inbound Control
+        icon: '/svg/ourServicesIcons/inboundControl.svg',
+        description: 'Managing the entire process of goods, from shipment tracking to raising Istar and handling goods receive.',
+    },
+    {
+        ...servicesNavigation[3], // Data Analytics
+        icon: '/svg/ourServicesIcons/dataAnalysis.svg',
+        description: 'Transform complex operational data into actional insights, helping you identify inefficiencies and make data-driven decisions for continuous improvement.',
+    },
+    {
+        ...servicesNavigation[4], // Logistics Projects
+        icon: '/svg/ourServicesIcons/logisticsProjects.svg',
+        description: 'Provide expertise to enhance your overall logistics capabilities and performance.',
+    },
 ];
 
 const Highlights = () => {
@@ -46,14 +48,14 @@ const Highlights = () => {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-5">
                 {servicesData.map((service, index) => (
                     <div
-                        key={service.title}
+                        key={service.name}
                         className="flex  relative flex-col bg-white p-8 transition-shadow duration-300 hover:shadow-lg group hover:border hover:border-bosch_blue"
                     >
                         <div className='h-3 w-full hidden inset-0 bg-bosch_blue absolute group-hover:block'></div>
                         {/* Icon */}
                         <Image
                             src={service.icon}
-                            alt={`${service.title} icon`}
+                            alt={`${service.name} icon`}
                             width={48}
                             height={48}
                             quality={20}
@@ -65,12 +67,12 @@ const Highlights = () => {
                         <div className="pt-10 flex flex-col justify-evenly">
                             <div className="flex items-start justify-between">
                                 <h3 className="pr-4 text-xl font-medium leading-tight text-gray-900">
-                                    {service.title}
+                                    {service.name}
                                 </h3>
-                                <a href="#" className="mt-1 shrink-0 text-blue-600 hover:text-blue-700">
-                                    <span className="sr-only">Learn more about {service.title}</span>
+                                <Link href={service.pathname} className="mt-1 shrink-0 text-blue-600 hover:text-blue-700">
+                                    <span className="sr-only">Learn more about {service.name}</span>
                                     <ArrowRight className="size-6" aria-hidden="true" />
-                                </a>
+                                </Link>
                             </div>
                             <p className="mt-4 text-sm text-gray-500">
                                 {service.description}

@@ -188,7 +188,7 @@ const Services: ServiceData[] = [
     },
     relatedLinks: [
       {
-        href: "onenote:Shipment+Tracking+and+Monitoring+Procedure.one#MA+Work+instruction&section-id={9bdc25b3-8f6e-4e83-aa28-48e6ec0edd3c}&page-id={30cda9e3-2d80-4091-b083-43d19d02ef1d}&end",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738780/OSD6AP2-15_Shipment_Tracking_and_Monitoring_Procedure_t4yq7o.pdf",
         linkText: "MA Shipment Tracking & Monitoring",
         details: "Shipment Tracking & Monitoring WI"
       },
@@ -198,22 +198,22 @@ const Services: ServiceData[] = [
         details: "MA Inbound Tracking File"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738781/OSD6AP2-13-3_iSTAR_WI_for_NonJP_MA_ztwbhg.pdf",
         linkText: "Istar APAC WI",
         details: "Non-JP MA Istar Work Instructions"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738780/OSD6AP2-13-2_MA_ISTAR_Process_yjvngs.pdf",
         linkText: "MA Istar Process",
         details: "MA Istar Process Map"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738780/OSD6AP2-13-2_PSLOP_ISTAR_gxf4xh.pdf",
         linkText: "PS Istar Process",
         details: "PS Istar Process Map"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738781/OSD6AP2-13-3_Manual__ISTAR_Creation_Process_For_JP_a0i9fl.pdf",
         linkText: "Manual Istar WI",
         details: "JP Istar Work Instruction"
       },

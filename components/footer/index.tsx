@@ -1,14 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { servicesNavigation } from '@/lib/services-navigation';
 
 const footerNavigation = {
-    services: [
-        { name: 'Planning', href: '/our-services/planning' },
-        { name: 'Inbound Control', href: '/our-services/inbound-control' },
-        { name: 'Data Analysis', href: '/our-services/data-analytics' },
-        { name: 'Master Data', href: '/our-services/master-data' },
-        { name: 'Logistics Projects', href: '/our-services/logistics-projects' },
-    ],
+    services: servicesNavigation.map(service => ({
+        name: service.name,
+        href: service.pathname
+    })),
     team: [
         { name: 'Organization Chart', href: '/#orgChart' },
         { name: 'Team Activities', href: '/our-activities' },
