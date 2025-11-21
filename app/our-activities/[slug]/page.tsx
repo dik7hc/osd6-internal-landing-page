@@ -28,7 +28,7 @@ interface ServiceHighlightPageProps {
     }>;
 }
 
-const PageBreadCrumb = ({ formattedSlug }: { formattedSlug: string }) => {
+const PageBreadCrumb = ({ title }: { title: string }) => {
     return (<Breadcrumb className="mb-4">
         <BreadcrumbList>
             <BreadcrumbItem>
@@ -40,7 +40,7 @@ const PageBreadCrumb = ({ formattedSlug }: { formattedSlug: string }) => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-                <BreadcrumbPage>{formattedSlug}</BreadcrumbPage>
+                <BreadcrumbPage>{title}</BreadcrumbPage>
             </BreadcrumbItem>
         </BreadcrumbList>
     </Breadcrumb>)
@@ -59,7 +59,7 @@ const ServiceHighlightPage = async ({ params }: ServiceHighlightPageProps) => {
 
     return (
         <main className="mx-auto max-w-7xl bg-white px-4 py-12 font-sans text-gray-800 sm:px-6 lg:px-8">
-            <PageBreadCrumb formattedSlug={activity.title} />
+            <PageBreadCrumb title={activity.title} />
             <div className="mb-8 flex items-start justify-between">
                 <h1 className="text-5xl font-bold">{activity.title}</h1>
             </div>

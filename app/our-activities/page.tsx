@@ -17,7 +17,7 @@ const PageBreadCrumb = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-                <BreadcrumbLink href="/our-activities">Our Activities</BreadcrumbLink>
+                <BreadcrumbPage>Our Activities</BreadcrumbPage>
             </BreadcrumbItem>
         </BreadcrumbList>
     </Breadcrumb>)
