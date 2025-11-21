@@ -93,27 +93,27 @@ const Services: ServiceData[] = [
     },
     relatedLinks: [
       {
-        href: "#",
-        linkText: "Procurement Planning Procedure",
-        details: "Procurement Planning standardized process"
-      },
-      {
-        href: "#",
-        linkText: "Creating scheduling agreement documentation",
-        details: "Create schedule agreement releases"
-      },
-      {
-        href: "#",
-        linkText: "Creating purchase order wi documentation",
-        details: "Creating purchase order with purchase requisition number"
-      },
-      {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736081/OSD6AP2-13-2_Procurement_Plannng_-_An_Overview_nacgff.pdf",
         linkText: "Procurement Planning - an overview",
         details: "Procure Planning - an overview"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736081/OSD6AP2-13_Procurement_Planning_Procedure_mgftlb.pdf",
+        linkText: "Procurement Planning Procedure",
+        details: "Procurement Planning standardized process"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736082/OSD6AP2-13-3_Creating_Scheduling_Agreement_Releases_sq6bzy.pdf",
+        linkText: "Creating scheduling agreement documentation",
+        details: "Create schedule agreement releases"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736084/OSD6AP2-13-3_Creating_Purchase_Order_with_Purchase_Requisition_Number_qbvtof.pdf",
+        linkText: "Creating purchase order wi documentation",
+        details: "Creating purchase order with purchase requisition number"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736082/OSD6AP2-13-3_Modifying_MM_Delivery_Schedule_Lines_cfeohp.pdf",
         linkText: "Modifying MM Delivery Schedule Lines",
         details: "Modifying MM Delivery Schedule Lines"
       }
