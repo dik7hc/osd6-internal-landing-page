@@ -68,7 +68,7 @@ const Activities: ActivityData[] = [
     ]
   },
   {
-    slug: "UXcellent-Session:-From-Pain-Points-to-Possibilities",
+    slug: "UXcellent-Session-From-Pain-Points-to-Possibilities",
     title: "UXcellent Session #2: From Pain Points to Possibilities ",
     date: "July 18th, 2025",
     author: "Pham Hong Ngoc ",
