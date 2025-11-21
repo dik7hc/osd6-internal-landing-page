@@ -274,27 +274,27 @@ const Services: ServiceData[] = [
     },
     relatedLinks: [
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/MA_IB_New_vendor_setup_gvr6pd.pdf",
         linkText: "Vendor Connection Set-up",
         details: "New Vendor Connection Set-up WI"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/MA_IB_Manual_Master_Data_Maintenance_fqchly.pdf",
         linkText: "Manual Master Data Maintenance",
         details: "Manual Master Data Maintenance WI"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735213/MA_IB_Source_Creation_for_source_change_stock_transfer_process_p5yjs3.pdf",
         linkText: "Source Creation",
         details: "Source creation for Source Change & Stock Transfer Process WI"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735213/MA_IB_Master_data_housekeeping_for_new_release_PN_yflmop.pdf",
         linkText: "Master Data Housekeeping",
         details: "Master data housekeeping for new release PN"
       },
       {
-        href: "#",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/Inventory_Management_Stocking_Policy_srhrps.pdf",
         linkText: "Stocking Policy",
         details: "Inventory Management Stocking Policy WI"
       }
