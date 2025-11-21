@@ -59,7 +59,7 @@ const Services: ServiceData[] = [
               text: "Develop and maintain statistical forecasts, incorporate market intelligence (sales, marketing, customer feedback), and manage the cross-functional consensus forecasting process."
             },
             {
-              label: "Strategic Outcome:",
+              label: "Outcome:",
               text: "Reduces error and bias in forecast, allowing the business to anticipate market shifts, prevent costly stockouts, and avoid risks associated with excess inventory."
             }
           ]
@@ -74,7 +74,7 @@ const Services: ServiceData[] = [
               text: "Determine the optimal timing, location, and volume for purchasing raw materials and components, manage supplier capacity constraints, and execute the detailed material requirements planning (MRP)."
             },
             {
-              label: "Strategic Outcome:",
+              label: "Outcome:",
               text: "Improves supplier lead time compliance, optimizes inventory levels for key materials, and maximizes production capacity utilization, safeguarding all manufacturing and assembly schedules."
             }
           ]
@@ -143,7 +143,7 @@ const Services: ServiceData[] = [
               text: "Monitor supplier performance and transit milestones against expected delivery dates. Proactively communicate and manage exceptions with logistics providers and internal stakeholders (eg: shipment delays, import/export documentations, etc)"
             },
             {
-              label: "Strategic Outcome:",
+              label: "Outcome:",
               text: "Ensure accurate documentation required for importing process. Minimizes demurrage and detention charges by ensuring resources are ready upon arrival, and allows internal functions to plan production or distribution based on confirmed material availability."
             }
           ]
@@ -255,7 +255,7 @@ const Services: ServiceData[] = [
               text: " Manage the complete lifecycle of Material Master Data records, including creation, classification, extension to new plant/storage locations, and retirement. Ensure accurate definition and configuration of key parameters."
             },
             {
-              label: "Strategic Outcome:",
+              label: "Outcome:",
               text: "Maintains an accurate source of information on all materials. Enabling the process of planning, selling, and buying."
             }
           ]

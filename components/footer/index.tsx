@@ -45,7 +45,7 @@ const Footer = () => {
 
                     {/* Our Team Column */}
                     <div className="space-y-4">
-                        <h3 className="text-sm font-bold text-black">Our Team</h3>
+                        <h3 className="text-sm font-bold text-black">Team Activities</h3>
                         <ul role="list" className="space-y-3">
                             {footerNavigation.team.map((item) => (
                                 <li key={item.name}>
