@@ -10,18 +10,18 @@ const Activities: ActivityData[] = [
     date: "October 15, 2024",
     author: "Pham Hong Ngoc ",
     mainImages: [
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763626715/TransPlan_1_fkg3hn.jpg"
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763626715/TransPlan_1_fkg3hn.jpg",
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715608/TransPlan_5_jgbbyg.heic"
     ],
     mainImageCaption: "UXcellent1",
     content: [
       "On September 9th, 2025, our department has hosted an experience day, where we showcased our services to other departments in RBVN. As the event ends with a lasting impression, a big appreciation goes to GEM team for organizing this event, our amazing moderator – Ryan, and all our speakers who were excellent in explaining our services to a non-logistics audience – anh Phương, anh Huy, chị Sanny, anh Lộc, anh Đạt, anh Minh, chị Thương, chị Trân, chị Bình, anh Hậu, and chị Giang."
+    ],
+    galleryImages: [
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715620/TransPlan4_vvegbe.heic",
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715608/TransPlan2_zzmd0p.heic",
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715608/TransPlan3_tpa0qg.heic"
     ]
-    // galleryImages: [
-    //     '/images/UXcellent1.jpeg',
-    //     '/images/UXcellent1.jpeg',
-    //     '/images/UXcellent1.jpeg',
-    //     '/images/UXcellent1.jpeg',
-    // ],
   },
   {
     slug: "Welcome-MA-LO-Visit",
@@ -96,13 +96,11 @@ const Activities: ActivityData[] = [
     content: [
       "This year, to refresh everyone’s UX mindset and improve our UX maturity level, on June 19th, our UXcellent session 2 focuses on solving the case study of improving a dashboard according to the collected user feedback. Utilizing the tools of customer journey mapping and a persona map, 4 teams have re-designed their dashboard according to the respective understanding of the users need, presenting 4 different views of the same case study.",
       "As this session brings us a step closer to the last UXcellent session of the year, we hope that everyone will continue to keep up this professional positive energy, and finish the year strong with a new level in UX maturity."
+    ],
+    galleryImages: [
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715676/Uxcellent_2_lppsrr.jpg",
+  
     ]
-    // galleryImages: [
-    //     '/images/UXcellent1.jpeg',
-    //     '/images/UXcellent1.jpeg',
-    //     '/images/UXcellent1.jpeg',
-    //     '/images/UXcellent1.jpeg',
-    // ],
   },
   {
     slug: "Introduction-from-GS-PSD6-DA",
