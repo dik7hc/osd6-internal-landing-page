@@ -20,7 +20,7 @@ const HeroSection = () => {
         </div>
    
         <p className="text-lg text-gray-700">
-          Est 2019.
+          Est. 2019
         </p>
         <div className="mt-14 flex flex-col items-center">
           <ArrowDown strokeWidth={1} className='size-10 text-gray-800' />

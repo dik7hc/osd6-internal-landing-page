@@ -175,7 +175,7 @@ const organizationData: Organization[] = [
 
 
                         { name: 'Thai Ho Duy PHUONG', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763618902/Thai_Ho_Duy_Phuong_mumou9.jpg' },
-                        { name: 'Nguyen Hoai THUAN', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Ngan_Ha_ibiogf.png' },
+                        { name: 'Nguyen Hoai THUAN', id: 'CN/EA', role: 'Master Data Management', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763628653/Nguyen_Hoai_THUAN_mxua3v.png' },
 
                         { name: 'Pham Minh TUAN', id: 'CN/EA', role: 'Management Reporting', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557594/Pham_Minh_Tuan_vkqzpe.png' },
                         { name: 'Tran Vu Ngoc TRAN', id: 'CN', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763609812/Tran_Vu_Ngoc_Tran_eu0oph.jpg' },
