@@ -1,5 +1,5 @@
 import Footer from '@/components/footer';
-import ServicePlanningHeader from './ServicePlanningHeader';
+import ServicePlanningHeader from '@/components/header-with-navbar.tsx';
 
 export default function ServicePlanningLayout({
   children,

@@ -2,12 +2,14 @@
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import Header from '@/components/header';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const tabsData = [
     {
         id: 1,
         label: 'Home',
+        pathname: "/"
     },
     {
         id: 2,
@@ -16,29 +18,35 @@ const tabsData = [
     {
         id: 3,
         label: 'Our Activities',
+        pathname: "/our-activities/"
     },
 ];
 const subTabs1 = [
     {
         id: 3,
         label: 'Master Data',
+        pathname: '/our-services/master-data',
     },
     {
         id: 1,
         label: 'Planning',
+        pathname: '/our-services/planning',
     },
     {
         id: 2,
         label: 'Inbound Control',
+        pathname: '/our-services/inbound-control',
     },
   
     {
         id: 4,
         label: 'Data Analytics',
+        pathname: '/our-services/data-analytics',
     },
     {
         id: 5,
         label: 'Logistics Projects',
+        pathname: '/our-services/logistics-projects',
     },
 ];
 
@@ -57,6 +65,7 @@ const tabActiveColors: Record<number, string> = {
 const ServicePlanningHeader = () => {
     const [tab, setTab] = useState(0)
     const router = useRouter()
+    const pathname = usePathname()
 
     const handleClickTab = (id: number) => {
         if (id == 3) {
@@ -88,7 +97,7 @@ const ServicePlanningHeader = () => {
 
                             {
                                 "bg-bosch_blue/40": isActive,
-                                [tabActiveColors[item.id]]: isActive, // e.g., { "border-bosch_blue": true }
+                                [tabActiveColors[item.id]]: isActive || (pathname == item.pathname || (pathname.includes("/our-services/") && item.id == 2)), 
                             }
                         )}
                     >
@@ -97,14 +106,15 @@ const ServicePlanningHeader = () => {
                 })}
             </Header>
             <div className={cn("bg-gray-400", tab == 2 ? "" : "hidden")}>
-                <div className='3xl:mx-[60rem] lg:mx-[9.5rem] flex max-w-7xl lg:w-3/4 justify-center'>
+                <div className='3xl:mx-[39rem] 2xl:mx-[19rem] lg:mx-[9.5rem] flex max-w-7xl lg:w-3/4 justify-center'>
                     {tab == 2 && subTabs1.map((subTab) => (
-                        <button
-                            key={subTab.id}
-                            className={cn(" border-b-4 border-transparent px-8 py-[14px] text-gray-900 transition-colors hover:bg-bosch_blue/40 ")}
-                        >
-                            {subTab.label}
-                        </button>
+                       <Link key={subTab.id} href={subTab.pathname}>
+                            <div
+                                className={cn(" border-b-4 border-transparent px-8 py-[14px] text-gray-900 transition-colors hover:bg-bosch_blue/40 ")}
+                            >
+                                {subTab.label}
+                            </div>
+                       </Link>
                     ))}
                 </div>
             </div>

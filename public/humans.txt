@@ -1,7 +1,7 @@
 # Humans.txt
 
 /* TEAM */
-Developer: GS/OSD6 Team
+Developer: GS/SD6 Team
 Contact: gs-osd6@bosch.com
 From: Ho Chi Minh City, Vietnam
 

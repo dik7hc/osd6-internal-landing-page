@@ -36,7 +36,7 @@ const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
     <Image
       src={"/svg/logo.svg"}
-      alt="osd6 Logo"
+      alt="sd6 Logo"
       width={150}
       height={90}
       className={"scale-150 -mt-6" + className}

@@ -1,7 +1,442 @@
 import { ActivityData } from "@/app/our-activities/[slug]/page";
-import { SolutionProps } from "@/app/service-portfolio/page"
-import { StoryProps } from "@/components/story-card/story-card"
 
+export interface ServiceData {
+  slug: string;
+  title: string;
+  hero: {
+    paragraph: string;
+    customers: string;
+    headcount: string;
+    functions?: string;
+  };
+  overview: {
+    description: string;
+    sections: Array<{
+      title?: string;
+      content?: string;
+      items: Array<{
+        label?: string;
+        text: string;
+      }>;
+    }>;
+  };
+  standardProcess: {
+    description: string;
+    images: Array<{
+      title?: string;
+      imagePath: string;
+    }>;
+  };
+  relatedLinks: Array<{
+    href: string;
+    linkText: string;
+    details: string;
+  }>;
+}
+
+const Services: ServiceData[] = [
+  {
+    slug: "planning",
+    title: "Planning",
+    hero: {
+      paragraph:
+        "The Planning service is the critical function responsible for ensuring optimal flow of materials and products across the entire supply chain, from raw material procurement to final customer delivery. Our objective is to strategically balance future demand forecasts, inventory investments, and supplier capacity to maximize service levels while minimizing operating costs and working capital. This integrated approach covering Demand and Procurement Planning – enables data-driven decision-making that directly impacts organizational agility, resilience, and financial performance.",
+      customers: "MA, PS, VM, EM, IPO, MusP",
+      headcount: "18",
+      functions: "3"
+    },
+    overview: {
+      description:
+        "The Planning function is structured around two core pillars that work in concert to manage the entire lifecycle of goods and resources efficiently. Each pillar is vital for converting the company's strategic goals into an executable supply chain plan.",
+      sections: [
+        {
+          title: "1. Demand Planning",
+          content:
+            "This process focuses on accurately predicting future customer requirements to create a single, unified view of expected sales.",
+          items: [
+            {
+              label: "Core Responsibility:",
+              text: "Develop and maintain statistical forecasts, incorporate market intelligence (sales, marketing, customer feedback), and manage the cross-functional consensus forecasting process."
+            },
+            {
+              label: "Strategic Outcome:",
+              text: "Reduces error and bias in forecast, allowing the business to anticipate market shifts, prevent costly stockouts, and avoid risks associated with excess inventory."
+            }
+          ]
+        },
+        {
+          title: "2. Procurement Planning",
+          content:
+            "This pillar translates the approved demand plan into a feasible plan for material procurement and production, ensuring we have the right components at the right time.",
+          items: [
+            {
+              label: "Core Responsibility:",
+              text: "Determine the optimal timing, location, and volume for purchasing raw materials and components, manage supplier capacity constraints, and execute the detailed material requirements planning (MRP)."
+            },
+            {
+              label: "Strategic Outcome:",
+              text: "Improves supplier lead time compliance, optimizes inventory levels for key materials, and maximizes production capacity utilization, safeguarding all manufacturing and assembly schedules."
+            }
+          ]
+        }
+      ]
+    },
+    standardProcess: {
+      description:
+        "The following process map visually outlines the essential steps and review stages of the Procurement Planning process, ensuring a synchronized and efficient approach to material acquisition and scheduling.",
+      images: [
+        {
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726852/Standard_Process_Planning_chs3sj.png"
+        }
+      ]
+    },
+    relatedLinks: [
+      {
+        href: "#",
+        linkText: "Procurement Planning Procedure",
+        details: "Procurement Planning standardized process"
+      },
+      {
+        href: "#",
+        linkText: "Creating scheduling agreement documentation",
+        details: "Create schedule agreement releases"
+      },
+      {
+        href: "#",
+        linkText: "Creating purchase order wi documentation",
+        details: "Creating purchase order with purchase requisition number"
+      },
+      {
+        href: "#",
+        linkText: "Procurement Planning - an overview",
+        details: "Procure Planning - an overview"
+      },
+      {
+        href: "#",
+        linkText: "Modifying MM Delivery Schedule Lines",
+        details: "Modifying MM Delivery Schedule Lines"
+      }
+    ]
+  },
+  {
+    slug: "inbound-control",
+    title: "Inbound Control",
+    hero: {
+      paragraph:
+        "The Inbound Control service is the foundational operational discipline responsible for managing the flow of materials entering our system. This function encompasses the administrative and physical cooperation, required to transition materials from the supplier's custody into our designated inventory.",
+      customers: "MA, VM, DCEA, ME, PS, IPO, GS/OSD1-JP",
+      headcount: "16",
+      functions: "3"
+    },
+    overview: {
+      description:
+        "The Inbound Control service is structured around three key activities: Shipment Tracking, I-star Creation, and Goods Receipt.",
+      sections: [
+        {
+          title: "1. Real-Time Shipment Tracking",
+          content:
+            "This process focuses on maintaining continuous, end-to-end visibility of all materials scheduled for delivery, from the moment they depart the supplier until they arrive at our receiving warehouse.",
+          items: [
+            {
+              label: "Core Responsibility:",
+              text: "Monitor supplier performance and transit milestones against expected delivery dates. Proactively communicate and manage exceptions with logistics providers and internal stakeholders (eg: shipment delays, import/export documentations, etc)"
+            },
+            {
+              label: "Strategic Outcome:",
+              text: "Ensure accurate documentation required for importing process. Minimizes demurrage and detention charges by ensuring resources are ready upon arrival, and allows internal functions to plan production or distribution based on confirmed material availability."
+            }
+          ]
+        },
+        {
+          title: "2. ISTAR",
+          content:
+            "This is the mandatory pre-authorization step that monitors the change in shipment method, before order is changed and releases.",
+          items: [
+            {
+              label: "Core Responsibility:",
+              text: "Generate documentation that would help the process of approving a shipment mode change."
+            },
+            {
+              label: "Outcome:",
+              text: "Help gather data to monitor source planning capability, by tracking actual cost vs. estimated cost of shipment mode change."
+            }
+          ]
+        }
+      ]
+    },
+    standardProcess: {
+      description: "",
+      images: [
+        {
+          title: "Shipment Tracking:  ",
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726632/inbound_control_shipment_tracking_jjs9g3.png"
+        },
+        {
+          title: "Istar:",
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726626/inbound_control_Istar_acqwcc.png"
+        },
+        {
+          title:
+            "Goods Receipt: The goods receipt process is divided into a process where WH have access to the system and where WH do not have access to the system.",
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726627/inbound_control_GR_Process_oy4j13.png"
+        }
+      ]
+    },
+    relatedLinks: [
+      {
+        href: "onenote:Shipment+Tracking+and+Monitoring+Procedure.one#MA+Work+instruction&section-id={9bdc25b3-8f6e-4e83-aa28-48e6ec0edd3c}&page-id={30cda9e3-2d80-4091-b083-43d19d02ef1d}&end",
+        linkText: "MA Shipment Tracking & Monitoring",
+        details: "Shipment Tracking & Monitoring WI"
+      },
+      {
+        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-01-Goods%20Receipt%20Tracking%20File.xlsx?d=w92699ad9b4f64462ab7787eba5fe0c33&csf=1&web=1&e=b52vhc",
+        linkText: "Inbound Tracking MA - APAC",
+        details: "MA Inbound Tracking File"
+      },
+      {
+        href: "#",
+        linkText: "Istar APAC WI",
+        details: "Non-JP MA Istar Work Instructions"
+      },
+      {
+        href: "#",
+        linkText: "MA Istar Process",
+        details: "MA Istar Process Map"
+      },
+      {
+        href: "#",
+        linkText: "PS Istar Process",
+        details: "PS Istar Process Map"
+      },
+      {
+        href: "#",
+        linkText: "Manual Istar WI",
+        details: "JP Istar Work Instruction"
+      },
+      {
+        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-01-Goods%20Receipt%20Tracking%20File.xlsx?d=w92699ad9b4f64462ab7787eba5fe0c33&csf=1&web=1&e=b52vhc",
+        linkText: "Delivery notice for SEA",
+        details: "Template of a delivery notice to warehouse staff"
+      },
+      {
+        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-03-Delivery%20Notice%20To%20Warehouse%20Template%20(AIR%26COURIER).xlsx?d=w795dcaad3efa44a7834e03c03ca4a7fe&csf=1&web=1&e=TAwfWs",
+        linkText: "Delivery notice for AIR & COURIER",
+        details: "Template of a delivery notice to warehouse staff"
+      },
+      {
+        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-01-Goods%20Receipt%20Tracking%20File.xlsx?d=w92699ad9b4f64462ab7787eba5fe0c33&csf=1&web=1&e=b52vhc",
+        linkText: "Goods Receipt tracking file",
+        details: "Tracking file for goods receipt"
+      }
+    ]
+  },
+  {
+    slug: "master-data",
+    title: "Master Data",
+    hero: {
+      paragraph:
+        "The Master Data function is the central governance discipline responsible for defining and maintaining all foundational data elements of a material.",
+      customers: "MA",
+      headcount: "2"
+      // functions: "4"
+    },
+    overview: {
+      description:
+        "This process focuses on maintaining all critical, transactional parameters necessary to define and use materials correctly across the entire supply chain and enterprise system landscape.",
+      sections: [
+        {
+          items: [
+            {
+              label: "Core Responsibility:",
+              text: " Manage the complete lifecycle of Material Master Data records, including creation, classification, extension to new plant/storage locations, and retirement. Ensure accurate definition and configuration of key parameters, such as:"
+            },
+            {
+              label: "Strategic Outcome:",
+              text: "Maintains an accurate source of information on all materials. Enabling the process of planning, selling, and buying."
+            }
+          ]
+        }
+      ]
+    },
+    standardProcess: {
+      description:
+        "The following process map visually outlines the essential steps in maintain material master data.",
+      images: [
+        {
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726627/Standard_Process_Master_Data_wwycld.png"
+        }
+      ]
+    },
+    relatedLinks: [
+      {
+        href: "#",
+        linkText: "Vendor Connection Set-up",
+        details: "New Vendor Connection Set-up WI"
+      },
+      {
+        href: "#",
+        linkText: "Manual Master Data Maintenance",
+        details: "Manual Master Data Maintenance WI"
+      },
+      {
+        href: "#",
+        linkText: "Source Creation",
+        details: "Source creation for Source Change & Stock Transfer Process WI"
+      },
+      {
+        href: "#",
+        linkText: "Master Data Housekeeping",
+        details: "Master data housekeeping for new release PN"
+      },
+      {
+        href: "#",
+        linkText: "Stocking Policy",
+        details: "Inventory Management Stocking Policy WI"
+      }
+    ]
+  },
+  {
+    slug: "data-analytics",
+    title: "Data Analytics",
+    hero: {
+      paragraph:
+        "The Data Analytics service focuses on transforming vast streams of supply chain data into comprehensive overview and actionable insights. The service encompasses full-stack development process of supply chain digital tools: from business analysis to frontend/backend development of advanced analytics and reporting functionalities. Key products include the Bottleneck Prevention (Shortage & Overstock) dashboard, designed to proactively identify, quantify, alert, and make automated decisions to address material shortage/overstock risks.",
+      customers: "PSD63 ",
+      headcount: "3"
+      // functions: "2"
+    },
+    overview: {
+      description:
+        "This function focuses on systematic approaches to build reliable, useful data pipelines and analytics products to support efficiency and effectiveness in inbound management processes.",
+      sections: [
+        {
+          title: "Core Responsibilities:  ",
+          content: " ",
+          items: [
+            {
+              label: "Business analysis:",
+              text: "Identify pain points based on a deep understanding of inbound management processes. This is where the OSD6 hands-on experience doing remote logistics planning and operations management for Bosch entities in APAC/EU region shines: from initial business problems/ideas to the learning feedback loops to develop tools with high UX value."
+            },
+            {
+              label: "Technical translation:",
+              text: "Translate the real-world business needs and customer expectations to technical requirements so that IT developers and machines can understand."
+            },
+            {
+              label: "Product/Project management:",
+              text: "Work in a close loop with customers and developers to ensure project delivery in a timely manner within the given resource boundaries."
+            },
+            {
+              label: "Frontend/Backend Development:",
+              text: "In-house IT developers working closely with domain experts to realize the IT solution needed by the customers/business."
+            },
+            {
+              label: "QA testing/User testing:",
+              text: "Assure the final solution complies to the requirements and actually solves the business problems via internal team testing as well as frequent feedback exchange with users/customers."
+            }
+          ]
+        },
+        {
+          title: "Outcomes:",
+          items: [
+            {
+              text: "Reliable, accurate, and useful supply chain digital tools that can be used by global users."
+            }
+          ]
+        }
+      ]
+    },
+    standardProcess: {
+      description:
+        "The following process map shows the analytics workflow, from data collection and processing to insights generation and action planning.",
+      images: [
+        {
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726629/DA_Standard_Process_mormti.jpg"
+        }
+      ]
+    },
+    relatedLinks: [
+      {
+        href: "https://digilink.app.bosch.com/",
+        linkText: "Shortage Prevention",
+        details:
+          "Simulates inventory to flag risks when supply fails to cover demand."
+      },
+      {
+        href: "https://app.visily.ai/projects/742dcd3d-40e4-46cb-b8fe-59a47dc7d7b4/boards/1560967",
+        linkText: "Overstock Prevention",
+        details:
+          "Proactively identifies stock exceeding demand and other material risks."
+      }
+    ]
+  },
+  {
+    slug: "logistics-projects",
+    title: "Logistics Projects",
+    hero: {
+      paragraph:
+        "The Logistics Projects service provides specialized consulting and project management expertise tailored to optimize complex supply chain operations. This service currently centers on the Kinaxis Implementation Project, which ensures a functional adoption of the Kinaxis platform.",
+      customers: " ",
+      headcount: " "
+      // functions: "2"
+    },
+    overview: {
+      description:
+        "This process focuses on providing dedicated consulting support and oversight necessary to successfully implement and integrate the Kinaxis planning platform across relevant logistics and supply chain functions.",
+      sections: [
+        {
+          title: "Core Responsibilities:",
+          items: [
+            {
+              label: "Project Governance & Alignment:",
+              text: "Guide the implementation lifecycle, ensuring all project phases (design, configuration, testing, and deployment) align with defined business requirements and strategic logistics objectives."
+            },
+            {
+              label: "System Design & Process Mapping:",
+              text: "Serve as the liaison between technical implementers and logistics end-users, translating complex operational processes into functional Kinaxis workflows and configurations."
+            },
+            {
+              label: " Solution Validation & Testing:",
+              text: "Develop and execute comprehensive test plans for Kinaxis modules, verifying that the configured solution accurately models and optimizes key logistics scenarios (e.g., demand sensing, inventory optimization)."
+            },
+            {
+              label: "Change Management & Training:",
+              text: "Facilitate the transition to the new planning system by supporting the development of training materials and providing expert guidance to users adopting the Kinaxis platform. "
+            }
+          ]
+        },
+        {
+          title: "Outcome",
+          content:
+            "Support in establishing a unified high-performing planning environment powered by Kinaxis. Enabling supply chain planning with improved forecast accuracy, end-to-end visibility and responsiveness.",
+          items: []
+        }
+      ]
+    },
+    standardProcess: {
+      description: "This is our team structure for the Kinaxis project. ",
+      images: [
+        {
+          title: "This is our team structure for the Kinaxis project. ",
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726633/Log_Proj_standard_process_femkuo.jpg"
+        },
+        {
+          title:
+            "In regards to the Kinaxis project, here is the future we envisioned of BBM with Kinaxis.",
+          imagePath:
+            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726635/Log_Proj_System_vqovru.jpg"
+        }
+      ]
+    },
+    relatedLinks: []
+  }
+]
 
 const Activities: ActivityData[] = [
   {
@@ -102,6 +537,7 @@ const Activities: ActivityData[] = [
 ]
 
 const Mock = {
-  Activities
+  Activities,
+  Services
 }
 export default Mock

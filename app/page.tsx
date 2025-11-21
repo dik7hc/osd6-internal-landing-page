@@ -6,10 +6,10 @@ import Highlights from "@/components/hightlights";
 import OkrSection from "@/components/okr";
 import TeamActivities from "@/components/opex";
 import { Metadata } from "next";
-import ServicePlanningHeader from "./service-planning/ServicePlanningHeader";
+import ServicePlanningHeader from "@/components/header-with-navbar.tsx";
 
 export const metadata: Metadata = {
-  title: "GS/OSD | Bosch tại Việt Nam",
+  title: "SD6 | Bosch tại Việt Nam",
   description: "Khám phá những công nghệ tiên tiến và giải pháp đáng tin cậy từ Bosch. Chúng tôi tạo ra công nghệ có ích cho cuộc sống tại Việt Nam.",
   keywords: "Bosch, Việt Nam, công nghệ, sáng tạo, đáng tin cậy, automotive, mobility, industrial technology, consumer goods, energy",
   openGraph: {
