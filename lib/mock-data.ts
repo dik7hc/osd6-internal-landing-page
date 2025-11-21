@@ -11,16 +11,16 @@ const Activities: ActivityData[] = [
     author: "Pham Hong Ngoc ",
     mainImages: [
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763626715/TransPlan_1_fkg3hn.jpg",
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715608/TransPlan_5_jgbbyg.heic"
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716245/TransPlan_5_rzibjj.jpg"
     ],
-    mainImageCaption: "UXcellent1",
+    mainImageCaption: "TransPlan Hub Experience Day Image",
     content: [
       "On September 9th, 2025, our department has hosted an experience day, where we showcased our services to other departments in RBVN. As the event ends with a lasting impression, a big appreciation goes to GEM team for organizing this event, our amazing moderator – Ryan, and all our speakers who were excellent in explaining our services to a non-logistics audience – anh Phương, anh Huy, chị Sanny, anh Lộc, anh Đạt, anh Minh, chị Thương, chị Trân, chị Bình, anh Hậu, and chị Giang."
     ],
     galleryImages: [
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715620/TransPlan4_vvegbe.heic",
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715608/TransPlan2_zzmd0p.heic",
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715608/TransPlan3_tpa0qg.heic"
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716232/TransPlan4_edqjfw.jpg",
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716235/TransPlan2_wralyf.jpg",
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716247/TransPlan3_fwfjgj.jpg"
     ]
   },
   {
@@ -71,7 +71,7 @@ const Activities: ActivityData[] = [
     mainImages: [
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763569421/UXcellent1_lfup0h.jpg"
     ],
-    mainImageCaption: "UXcellent1",
+    mainImageCaption: "Workshop Images",
     content: [
       "Following the transportation of goods, on May 30th, anh Lộc and Ngoc have shared about the custom procedure when importing / exporting goods. Starting with the HS Code, we must remember its format of 6 international standard codes with 2-4 country-specific numbers. Then, determining the specific code with the 6 GRIs (general rules of interpretation), we must rely on GRI 5 for all packaging – except for transportation.",
       "With the code now defined, declaring its customs value depends on our transaction values plus all payables before destination port, minus all costs beyond this point. However, as transaction values can be manipulated, 5 other methods are used in its stead, depending on certain situations.",
@@ -85,21 +85,20 @@ const Activities: ActivityData[] = [
     // ],
   },
   {
-    slug: "UXcellent-Session-#2:-From-Pain-Points-to-Possibilities",
+    slug: "UXcellent-Session:-From-Pain-Points-to-Possibilities",
     title: "UXcellent Session #2: From Pain Points to Possibilities ",
     date: "July 18th, 2025",
     author: "Pham Hong Ngoc ",
     mainImages: [
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763569421/UXcellent1_lfup0h.jpg"
     ],
-    mainImageCaption: "UXcellent1",
+    mainImageCaption: "UXcellent Session Images",
     content: [
       "This year, to refresh everyone’s UX mindset and improve our UX maturity level, on June 19th, our UXcellent session 2 focuses on solving the case study of improving a dashboard according to the collected user feedback. Utilizing the tools of customer journey mapping and a persona map, 4 teams have re-designed their dashboard according to the respective understanding of the users need, presenting 4 different views of the same case study.",
       "As this session brings us a step closer to the last UXcellent session of the year, we hope that everyone will continue to keep up this professional positive energy, and finish the year strong with a new level in UX maturity."
     ],
     galleryImages: [
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715676/Uxcellent_2_lppsrr.jpg",
-  
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763715676/Uxcellent_2_lppsrr.jpg"
     ]
   },
   {
@@ -108,9 +107,10 @@ const Activities: ActivityData[] = [
     date: "July 18th, 2025",
     author: "Pham Hong Ngoc ",
     mainImages: [
-      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763569421/UXcellent1_lfup0h.jpg"
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716253/PSD6_1_nelsba.jpg",
+      "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716251/PSD6_2_fe6kde.jpg"
     ],
-    mainImageCaption: "UXcellent1",
+    mainImageCaption: "GS-PSD6-DA Team Image",
     content: [
       "On May 15th – 16th, our office has welcome 3 guests from GS/PSD6-DA: Kobold Miriam, Zhao Sylvia, and Xia Ningning. With an introductory session on their second day, the team got to know more about the full inbound cockpit project and the team members of the PSD6-DA team.",
       "With the cockpit now live, the chatbot is expected to be release soon with abilities in calculating numbers, and drawing quick charts – hence, answering our questions without having to export data onto excel. "
