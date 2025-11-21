@@ -1,37 +1,32 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
 const footerNavigation = {
     services: [
-        { name: 'Planning', href: '#' },
-        { name: 'Inbound Control', href: '#' },
-        { name: 'Data Analysis', href: '#' },
-        { name: 'Master Data', href: '#' },
-        { name: 'Logistics Projects', href: '#' },
+        { name: 'Planning', href: '/our-services/planning' },
+        { name: 'Inbound Control', href: '/our-services/inbound-control' },
+        { name: 'Data Analysis', href: '/our-services/data-analytics' },
+        { name: 'Master Data', href: '/our-services/master-data' },
+        { name: 'Logistics Projects', href: '/our-services/logistics-projects' },
     ],
     team: [
-        { name: 'Organization Chart', href: '#' },
-        { name: 'Team Activities', href: '#' },
+        { name: 'Organization Chart', href: '/#orgChart' },
+        { name: 'Team Activities', href: '/our-activities' },
     ],
 }
 const Footer = () => {
     return (<>
         <footer className="bg-gray-300" >
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+            <div className="mx-auto flex max-w-7xl  justify-between px-4 py-3 sm:px-6 lg:px-8">
 
                 <Image src={'/svg/logoGS.svg'} alt='General Service Logo' width={250} height={50} className='scale-105'/>
 
-                <div className="grid grid-cols-2 gap-8 py-7 text-right md:grid-cols-4">
+                <div className="grid grid-cols-2 gap-8 py-7 text-right md:grid-cols-3">
                     {/* Single Link: Home Page */}
                     <div>
-                        <a href="#" className=" font-bold text-black hover:underline">
+                        <Link href="/" className=" font-bold text-black hover:underline">
                             Home Page
-                        </a>
-                    </div>
-
-                    {/* Single Link: OKR Status */}
-                    <div>
-                        <a href="#" className=" font-bold text-black hover:underline">
-                            OKR Status
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Services Column */}
@@ -40,9 +35,9 @@ const Footer = () => {
                         <ul role="list" className="space-y-3">
                             {footerNavigation.services.map((item) => (
                                 <li key={item.name}>
-                                    <a href={item.href} className=" text-gray-700 hover:text-black hover:underline">
+                                    <Link href={item.href} className=" text-gray-700 hover:text-black hover:underline">
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -54,9 +49,9 @@ const Footer = () => {
                         <ul role="list" className="space-y-3">
                             {footerNavigation.team.map((item) => (
                                 <li key={item.name}>
-                                    <a href={item.href} className="text-sm text-gray-700 hover:text-black hover:underline">
+                                    <Link href={item.href} className="text-sm text-gray-700 hover:text-black hover:underline">
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

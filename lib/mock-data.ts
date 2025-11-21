@@ -27,7 +27,7 @@ export interface ServiceData {
       imagePath: string;
     }>;
   };
-  relatedLinks: Array<{
+  relatedLinks?: Array<{
     href: string;
     linkText: string;
     details: string;
@@ -252,7 +252,7 @@ const Services: ServiceData[] = [
           items: [
             {
               label: "Core Responsibility:",
-              text: " Manage the complete lifecycle of Material Master Data records, including creation, classification, extension to new plant/storage locations, and retirement. Ensure accurate definition and configuration of key parameters, such as:"
+              text: " Manage the complete lifecycle of Material Master Data records, including creation, classification, extension to new plant/storage locations, and retirement. Ensure accurate definition and configuration of key parameters."
             },
             {
               label: "Strategic Outcome:",
@@ -381,8 +381,8 @@ const Services: ServiceData[] = [
     hero: {
       paragraph:
         "The Logistics Projects service provides specialized consulting and project management expertise tailored to optimize complex supply chain operations. This service currently centers on the Kinaxis Implementation Project, which ensures a functional adoption of the Kinaxis platform.",
-      customers: " ",
-      headcount: " "
+      customers: "BBM",
+      headcount: "2"
       // functions: "2"
     },
     overview: {
@@ -422,7 +422,6 @@ const Services: ServiceData[] = [
       description: "This is our team structure for the Kinaxis project. ",
       images: [
         {
-          title: "This is our team structure for the Kinaxis project. ",
           imagePath:
             "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726633/Log_Proj_standard_process_femkuo.jpg"
         },
@@ -433,8 +432,7 @@ const Services: ServiceData[] = [
             "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726635/Log_Proj_System_vqovru.jpg"
         }
       ]
-    },
-    relatedLinks: []
+    }
   }
 ]
 

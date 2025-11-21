@@ -1,12 +1,11 @@
-import OrganizationChart from "@/components/organization-chart";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import ServicePlanningHeader from "@/components/header-with-navbar.tsx";
 import HeroSection from "@/components/hero";
 import Highlights from "@/components/hightlights";
 import OkrSection from "@/components/okr";
 import TeamActivities from "@/components/opex";
+import OrganizationChart from "@/components/organization-chart";
 import { Metadata } from "next";
-import ServicePlanningHeader from "@/components/header-with-navbar.tsx";
 
 export const metadata: Metadata = {
   title: "SD6 | Bosch tại Việt Nam",
@@ -47,10 +46,10 @@ export default function Home() {
             <Highlights />
           </div>
         </div>
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" >
+        <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8" >
           <OkrSection />
         </div>
-        <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" >
+        <div className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8" id='orgChart'>
           <OrganizationChart />
         </div>
         <div className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" >

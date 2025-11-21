@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Link from "next/link"
 import { use, useState } from "react"
 import Mock, { ServiceData } from "@/lib/mock-data"
 import { notFound } from "next/navigation"
@@ -30,11 +31,7 @@ const PageBreadCrumb = ({ title }: { title: string }) => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                    <BreadcrumbLink href="/our-services">Our Services</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                    <BreadcrumbPage>{title}</BreadcrumbPage>
+                    <BreadcrumbPage>Our Services - {title}</BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
@@ -88,14 +85,14 @@ const OtherServicesList = ({ currentSlug }: { currentSlug: string }) => {
     return (
         <nav className="space-y-4">
             {otherServices.map((service) => (
-                <a
+                <Link
                     key={service.slug}
                     href={`/our-services/${service.slug}`}
                     className="group flex items-center justify-between font-medium text-gray-800 hover:text-bosch_blue"
                 >
                     <span>{service.title}</span>
                     <ArrowRight className="size-5 text-gray-400 transition-colors group-hover:text-bosch_blue" />
-                </a>
+                </Link>
             ))}
         </nav>
     )
@@ -141,7 +138,7 @@ const StandardProcess = ({ data }: { data: ServiceData['standardProcess'] }) => 
             {data.images.map((image, index) => (
                 <div key={index} className="flex flex-col gap-4">
                     {image.title && (
-                        <h3 className="text-lg font-semibold text-gray-900">
+                        <h3>
                             {image.title}
                         </h3>
                     )}
@@ -159,6 +156,7 @@ const StandardProcess = ({ data }: { data: ServiceData['standardProcess'] }) => 
 }
 
 const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
+    if (!links) return null
     return (
         <div className="w-full text-gray-700">
             <div className="grid grid-cols-2 gap-4 border-b-2 border-gray-400 px-4 py-3 font-bold text-gray-900">
@@ -229,13 +227,16 @@ const ServicePage = ({ params }: ServicePageProps) => {
                                     >
                                         Standard Process
                                     </div>
-                                    <div className={cn("size-full py-2 text-center text-lg hover:cursor-pointer", {
-                                            "bg-gray-200": tab == 3,
-                                        })}
-                                        onClick={() => selectTab(3)}
-                                    >
-                                        Process links
-                                    </div>
+                                    {   
+                                        service.relatedLinks && 
+                                        <div className={cn("size-full py-2 text-center text-lg hover:cursor-pointer", {
+                                                "bg-gray-200": tab == 3,
+                                            })}
+                                            onClick={() => selectTab(3)}
+                                        >
+                                            Process links
+                                        </div>
+                                    }
                                 </nav>
                                 <div className="bg-gray-200 p-4 pt-10">
                                     {tab == 1 && <Overview data={service.overview} />}
