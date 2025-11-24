@@ -446,7 +446,7 @@ const Activities: ActivityData[] = [
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763626715/TransPlan_1_fkg3hn.jpg",
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763716245/TransPlan_5_rzibjj.jpg"
     ],
-    mainImageCaption: "TransPlan Hub Experience Day Image",
+    mainImageCaption: "TransPlan Hub Experience Day Images",
     content: [
       "On September 9th, 2025, our department has hosted an experience day, where we showcased our services to other departments in RBVN. As the event ends with a lasting impression, a big appreciation goes to GEM team for organizing this event, our amazing moderator – Ryan, and all our speakers who were excellent in explaining our services to a non-logistics audience – anh Phương, anh Huy, chị Sanny, anh Lộc, anh Đạt, anh Minh, chị Thương, chị Trân, chị Bình, anh Hậu, and chị Giang."
     ],
@@ -464,7 +464,7 @@ const Activities: ActivityData[] = [
     mainImages: [
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763569581/MALO_Visit_cbpmoe.png"
     ],
-    mainImageCaption: "UXcellent1",
+    mainImageCaption: " MA/LO Visit",
     content: [
       "On September 4th – 5th, 2025, Philipp and Matthias have visited our team with a presentation that aimed to appreciate and ignite us with the mindset of building a #promisechain.In contrast to the old supply chain of storing goods and selling them to customer, this #promisechain is a circular loop that include planned promises being translated into full deliveries, going full circle back to the customer.Being a customer- forward model, many achievements have been made, across customer satisfaction, inventory, stock availability, and forecast accuracy.",
       "Looking into the future, Matthias has mentioned the upcoming pivot from internal improvements, to strengthening external relations.To understand more about the concept of #PromiseChain please click here."
@@ -508,7 +508,7 @@ const Activities: ActivityData[] = [
     mainImages: [
       "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763569421/UXcellent1_lfup0h.jpg"
     ],
-    mainImageCaption: "UXcellent Session Images",
+    mainImageCaption: "UXcellent Session #2 Images",
     content: [
       "This year, to refresh everyone’s UX mindset and improve our UX maturity level, on June 19th, our UXcellent session 2 focuses on solving the case study of improving a dashboard according to the collected user feedback. Utilizing the tools of customer journey mapping and a persona map, 4 teams have re-designed their dashboard according to the respective understanding of the users need, presenting 4 different views of the same case study.",
       "As this session brings us a step closer to the last UXcellent session of the year, we hope that everyone will continue to keep up this professional positive energy, and finish the year strong with a new level in UX maturity."
