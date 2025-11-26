@@ -91,8 +91,8 @@ const organizationData: Organization[] = [
 
                         { name: 'Ta Quang TRI', id: 'GS/OSD6 APAC23 PS-JP, DCEA', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557579/Ta_Quang_Tri_nf8mo2.jpg' },
 
-                        { name: 'Bui Tu Anh THU', id: 'GS/OSD6 APAC23 PS-JP', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763619049/Bui_Tu_Anh_Thu_z0qy7h.jpg' },
-
+                        { name: 'Nguyen Mai TRANG', id: 'GS/OSD6 APAC23 PS- JP', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763609424/Nguyen_Mai_Trang_fja8ne.jpg' },
+                        { name: 'Tong Uyen NHI', id: 'GS/OSD6 APAC23 PS-JP', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763619080/Tong_Uyen_Nhi_atkzvf.jpg' },
                     ],
 
                     [
@@ -114,6 +114,7 @@ const organizationData: Organization[] = [
                         // Các nhóm lẻ còn lại (IPO, LOP5)
 
                         { name: 'Nguyen Thuy VY', id: 'GS/OSD6 APAC23 IPO-JP', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763609408/Nguyen_Thuy_Vy_calqfh.png' },
+                        { name: 'Bui Tu Anh THU', id: 'GS/OSD6 APAC23 PS-JP', role: 'Logistics Operations', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763619049/Bui_Tu_Anh_Thu_z0qy7h.jpg' },
 
                         { name: 'Hoang Khanh LINH', id: 'GS/OSD6 APAC23 PS/LOP5-JP', role: 'Logistics Intern', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763618990/Hoang_Khanh_Linh_itkx7w.jpg' },
 
