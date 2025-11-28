@@ -162,6 +162,21 @@ const Services: ServiceData[] = [
               text: "Help gather data to monitor source planning capability, by tracking actual cost vs. estimated cost of shipment mode change."
             }
           ]
+        },
+        {
+          title: "3. Goods Receipt and Verification",
+          content:
+            "This activity is the final administrative confirmation that the materials have been successfully transferred from the carrier into our inventory system, marking the start of internal accountability.",
+          items: [
+            {
+              label: "Core Responsibility:",
+              text: "Maintain close coordination with customs brokers, forwarders and warehouses to monitor booking arrangements, shipping schedules, and cargo readiness."
+            },
+            {
+              label: "Outcome:",
+              text: "Ensure goods are delivered to the company’s warehouse on time and in compliance with regulations."
+            }
+          ]
         }
       ]
     },
@@ -223,12 +238,12 @@ const Services: ServiceData[] = [
         details: "Template of a delivery notice to warehouse staff"
       },
       {
-        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-03-Delivery%20Notice%20To%20Warehouse%20Template%20(AIR%26COURIER).xlsx?d=w795dcaad3efa44a7834e03c03ca4a7fe&csf=1&web=1&e=TAwfWs",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764318429/OSD6AP2-17-01-03-Delivery_Notice_To_Warehouse_Template_AIR_COURIER_oaftab.pdf",
         linkText: "Delivery notice for AIR & COURIER",
         details: "Template of a delivery notice to warehouse staff"
       },
       {
-        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-01-Goods%20Receipt%20Tracking%20File.xlsx?d=w92699ad9b4f64462ab7787eba5fe0c33&csf=1&web=1&e=b52vhc",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764318429/OSD6AP2-17-01-01-Goods_Receipt_Tracking_File_vtzbwq.pdf",
         linkText: "Goods Receipt tracking file",
         details: "Tracking file for goods receipt"
       }

@@ -38,6 +38,8 @@ const PageBreadCrumb = ({ title }: { title: string }) => {
     )
 }
 
+const lastUpdated = new Date()
+
 const PageHero = ({ service }: { service: ServiceData }) => {
     return (
         <div className="bg-gray-200">
@@ -72,7 +74,13 @@ const PageHero = ({ service }: { service: ServiceData }) => {
                             }
                             
                         </div>
+                        
                     </div>
+                    <span className="mt-2 block text-gray-500">Last Updated: {lastUpdated.toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })}</span>
                 </div>
             </div>
         </div>
@@ -195,6 +203,7 @@ const ServicePage = ({ params }: ServicePageProps) => {
 
     // Find the service data matching the slug
     const service = Mock.Services.find(s => s.slug === slug);
+
 
     // If service not found, show 404
     if (!service) {

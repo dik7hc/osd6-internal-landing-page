@@ -156,24 +156,48 @@ const BusinessGrowth = () => {
             </h3>
 
             <div className="space-y-6 pl-1">
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="Achieved" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">61.1% YTY Revenue Growth</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">60% business revenue growth in Q4.2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">61.1% YTY Revenue Growth</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                     <StatusBadge status="Achieved" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">6 new service contracts (DC / ME / 2 DP for MA EA / Consulting 2nd & 3rd SLA)</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">4 new service contracts within 2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">6 new service contracts (DC / ME / 2 DP for MA EA / Consulting 2nd & 3rd SLA)</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex items-start gap-3">
                     <StatusBadge status="Achieved" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">1 concept as of Q2.2025 (P+T+F Concept for MA), 1 Concept in Q4 - total solution for JP (operation management + digi)</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700"> 2 new service concepts introduced in 2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">1 concept as of Q2.2025 (P+T+F Concept for MA), 1 Concept in Q4 - total solution for JP (operation management + digi)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -187,16 +211,29 @@ const ValueOfService = () => {
             </h3>
 
             <div className="space-y-6 pl-1">
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="Achieved" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">Wiki Project for Process Transparency finished</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">OPEX OSD6 transparency & standardization in Q3.2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">Wiki Project for Process Transparency finished</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">Total service solutions to customer (full ownership) within 2025 </span>
+                        </div>
                     <div>
                         <span className="font-bold text-slate-900 ">Progress:</span>
                         <ul className="list-disc list-outside ml-4 space-y-1 text-slate-700">
@@ -204,12 +241,21 @@ const ValueOfService = () => {
                             <li>%Container utilization from LAFIEN average 74% (compared to 41%)</li>
                         </ul>
                     </div>
+                    </div>
                 </div>
                 <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">1:1 interview with DP (Jia Guijun) / SP (Chen Juan) / SMS4 (Yan Xiaolei) / SLC (Duan Dan)</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">At least 80% customer receiving emotional value when working with GS</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">1:1 interview with DP (Jia Guijun) / SP (Chen Juan) / SMS4 (Yan Xiaolei) / SLC (Duan Dan)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -225,21 +271,45 @@ const Digitalization = () => {
             <div className="space-y-6 pl-1">
                 <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">Digi-awareness successfully kick off 5/6 session</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">Digitalization awareness assessment score &gt; 70/100 within 2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">Digi-awareness successfully kick off 5/6 session</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex items-start gap-3">
                     <StatusBadge status="In Progress" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">2/2.5 HCs saved by Q2.2025</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">2.5 HCs saved by digitalization & process improvement</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">2/2.5 HCs saved by Q2.2025</span>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">2 success stories  in digitalization by Q2.2025 (PS/LOP1-JP & VM/LOP1-JP)</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">Get 4 Digitalization success stories recognized by customers in Q4.2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">2 success stories  in digitalization by Q2.2025 (PS/LOP1-JP & VM/LOP1-JP)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -254,19 +324,35 @@ const CustomerSatisfaction = () => {
 
             <div className="space-y-3 pl-1">
                 {/* Row 1 */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">68/80 VoCs Collected</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">80 VoCs by Q4.2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">68/80 VoCs Collected</span>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Row 2 */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">4.8/5 Rating on VoCs</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">Average VoC rating 4.7/5 in Q4.2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">4.8/5 Rating on VoCs</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -283,6 +369,12 @@ const CustomerSatisfaction = () => {
                 </div>
                 <div className="flex items-start gap-3 mt-1">
                     <ArrowRight size={14} className=" mt-1" />
+                    <div className="space-y-1">
+
+                    <div className="flex items-start gap-2">
+                        <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">UX ML3 by Q4.2025</span>
+                    </div>
                     <div>
                         <span className="font-bold text-slate-900 block mb-2">Progress:</span>
                         <ul className="list-disc list-outside ml-4 space-y-1 text-slate-700">
@@ -291,6 +383,7 @@ const CustomerSatisfaction = () => {
                             <li>Maintain 100% internal associates finished UX0</li>
                             <li>UX Champion Lead join UX ML4 audit</li>
                         </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -307,11 +400,19 @@ const OrganizationCapability = () => {
 
             <div className="space-y-3 pl-1">
                 {/* Row 1 */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="Achieved" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">7% capacity already dedicated to L&D Activities by Q2.2025</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">7% capacity dedicated to self-development in Q2.2025</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">7% capacity already dedicated to L&D Activities by Q2.2025</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -322,17 +423,33 @@ const OrganizationCapability = () => {
             </h3>
 
             <div className="space-y-3 pl-1">
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="Achieved" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">Competency Matric completed Q3.2025</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">OSD6 Competency Matrix & Learning Curriculum defined in Q2.2025 </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">Competency Matric completed Q3.2025</span>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-start gap-3">
                     <StatusBadge status="On Track" showStatus />
-                    <ArrowRight size={14} className="" />
-                    <span className="font-bold text-slate-900">Progress:</span>
-                    <span className="text-slate-700">12 associated joined the Proxy Matching Project</span>
+                    <ArrowRight size={14} className="mt-1" />
+                    <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Target:</span>
+                            <span className="text-slate-700">20% of associates can act/ serve as a proxy for other tasks </span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                            <span className="font-bold text-slate-900">Progress:</span>
+                            <span className="text-slate-700">12 associated joined the Proxy Matching Project</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
