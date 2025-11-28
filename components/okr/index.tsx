@@ -160,9 +160,9 @@ const BusinessGrowth = () => {
                     <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">60% business revenue growth in Q4.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>60% business revenue growth in Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -175,9 +175,9 @@ const BusinessGrowth = () => {
                     <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">4 new service contracts within 2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>4 new service contracts within 2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -189,9 +189,9 @@ const BusinessGrowth = () => {
                     <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700"> 2 new service concepts introduced in 2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span> 2 new service concepts introduced in 2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -215,9 +215,9 @@ const ValueOfService = () => {
                     <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">OPEX OSD6 transparency & standardization in Q3.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>OPEX OSD6 transparency & standardization in Q3.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -230,9 +230,9 @@ const ValueOfService = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">Total service solutions to customer (full ownership) within 2025 </span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>Total service solutions to customer (full ownership) within 2025 </span>
                         </div>
                     <div>
                         <span className="font-bold text-slate-900 ">Progress:</span>
@@ -247,9 +247,9 @@ const ValueOfService = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">At least 80% customer receiving emotional value when working with GS</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>At least 80% customer receiving emotional value when working with GS</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -273,9 +273,9 @@ const Digitalization = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">Digitalization awareness assessment score &gt; 70/100 within 2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>Digitalization awareness assessment score &gt; 70/100 within 2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -287,9 +287,9 @@ const Digitalization = () => {
                     <StatusBadge status="In Progress" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">2.5 HCs saved by digitalization & process improvement</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>2.5 HCs saved by digitalization & process improvement</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -301,9 +301,9 @@ const Digitalization = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">Get 4 Digitalization success stories recognized by customers in Q4.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>Get 4 Digitalization success stories recognized by customers in Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -328,9 +328,9 @@ const CustomerSatisfaction = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">80 VoCs by Q4.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>80 VoCs by Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -344,9 +344,9 @@ const CustomerSatisfaction = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">Average VoC rating 4.7/5 in Q4.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>Average VoC rating 4.7/5 in Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -371,9 +371,9 @@ const CustomerSatisfaction = () => {
                     <ArrowRight size={14} className=" mt-1" />
                     <div className="space-y-1">
 
-                    <div className="flex items-start gap-2">
-                        <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">UX ML3 by Q4.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                        <span>Target:</span>
+                        <span>UX ML3 by Q4.2025</span>
                     </div>
                     <div>
                         <span className="font-bold text-slate-900 block mb-2">Progress:</span>
@@ -404,9 +404,9 @@ const OrganizationCapability = () => {
                     <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">7% capacity dedicated to self-development in Q2.2025</span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>7% capacity dedicated to self-development in Q2.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -427,9 +427,9 @@ const OrganizationCapability = () => {
                     <StatusBadge status="Achieved" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">OSD6 Competency Matrix & Learning Curriculum defined in Q2.2025 </span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>OSD6 Competency Matrix & Learning Curriculum defined in Q2.2025 </span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -441,9 +441,9 @@ const OrganizationCapability = () => {
                     <StatusBadge status="On Track" showStatus />
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
-                        <div className="flex items-start gap-2">
-                            <span className="font-bold text-slate-900">Target:</span>
-                            <span className="text-slate-700">20% of associates can act/ serve as a proxy for other tasks </span>
+                        <div className="flex items-start gap-2 text-slate-700">
+                            <span>Target:</span>
+                            <span>20% of associates can act/ serve as a proxy for other tasks </span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
