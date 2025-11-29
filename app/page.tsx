@@ -8,11 +8,11 @@ import OrganizationChart from "@/components/organization-chart";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SD6 | Bosch tại Việt Nam",
+  title: "SD6 | Bosch Việt Nam",
   description: "Khám phá những công nghệ tiên tiến và giải pháp đáng tin cậy từ Bosch. Chúng tôi tạo ra công nghệ có ích cho cuộc sống tại Việt Nam.",
   keywords: "Bosch, Việt Nam, công nghệ, sáng tạo, đáng tin cậy, automotive, mobility, industrial technology, consumer goods, energy",
   openGraph: {
-    title: "Công nghệ sáng tạo và đáng tin cậy | Bosch tại Việt Nam",
+    title: "SD6 | Bosch Việt Nam",
     description: "Khám phá những công nghệ tiên tiến và giải pháp đáng tin cậy từ Bosch. Chúng tôi tạo ra công nghệ có ích cho cuộc sống tại Việt Nam.",
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
-    locale: "vi_VN",
+    locale: "en_EN",
   },
   twitter: {
     card: "summary_large_image",

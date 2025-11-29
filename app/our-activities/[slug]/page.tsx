@@ -10,6 +10,7 @@ import Mock from '@/lib/mock-data';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 
 export interface ActivityData {
     slug: string;
@@ -22,10 +23,29 @@ export interface ActivityData {
     galleryImages?: string[];
 }
 
-interface ServiceHighlightPageProps {
+interface ActivitiesPageProps {
     params: Promise<{
         slug: string;
     }>;
+}
+
+const getActivityBySlug = (slug: string) => {
+    return Mock.Activities.find(a => a.slug.trim() === slug)
+}
+
+export async function generateMetadata({ params }: ActivitiesPageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const activity = getActivityBySlug(slug);
+
+    if (!activity) {
+        return {
+            title: 'Activity | SD6 | Bosch Việt Nam',
+        };
+    }
+
+    return {
+        title: `${activity.title} | SD6 | Bosch Việt Nam`,
+    };
 }
 
 const PageBreadCrumb = ({ title }: { title: string }) => {
@@ -46,13 +66,11 @@ const PageBreadCrumb = ({ title }: { title: string }) => {
     </Breadcrumb>)
 }
 
-const ServiceHighlightPage = async ({ params }: ServiceHighlightPageProps) => {
+const ServiceHighlightPage = async ({ params }: ActivitiesPageProps) => {
     const { slug } = await params;
 
-    // Find the activity data matching the slug
-    const activity = Mock.Activities.find(a => a.slug.trim() === slug);
+    const activity = getActivityBySlug(slug)
 
-    // If activity not found, show 404
     if (!activity) {
         notFound();
     }
