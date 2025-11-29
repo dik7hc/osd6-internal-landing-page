@@ -11,17 +11,9 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
+import type { ActivityData } from '@/lib/types';
 
-export interface ActivityData {
-    slug: string;
-    title: string;
-    date: string;
-    author: string;
-    mainImages: string[];
-    mainImageCaption: string;
-    content: string[];
-    galleryImages?: string[];
-}
+export type { ActivityData };
 
 interface ActivitiesPageProps {
     params: Promise<{

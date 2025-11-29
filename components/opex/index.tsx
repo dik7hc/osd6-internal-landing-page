@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 import Image from 'next/image'
 import Link from 'next/link'
 import Mock from '@/lib/mock-data'
-import { ActivityData } from '@/app/our-activities/[slug]/page'
+import type { ActivityData } from '@/lib/types'
 
 export const ExperienceDayCard = ({ content, mainImageCaption, mainImages, slug, title }: Pick<ActivityData , 'title' | "mainImages" | "slug" | "mainImageCaption" | "content">) => {
     const description = content[0] ?? ""

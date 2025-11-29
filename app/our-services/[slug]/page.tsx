@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import Mock, { ServiceData } from "@/lib/mock-data"
+import Mock from "@/lib/mock-data"
 import { notFound } from "next/navigation"
 import {
     Breadcrumb,
@@ -9,7 +9,8 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { Metadata } from "next"
+import type { Metadata } from "next"
+import type { ServiceData } from "@/lib/types"
 import { ServicePageClient } from "./ServicePageClient"
 
 interface ServicePageProps {
@@ -52,8 +53,6 @@ const PageBreadCrumb = ({ title }: { title: string }) => {
         </Breadcrumb>
     )
 }
-
-const lastUpdated = new Date()
 
 const PageHero = ({ service }: { service: ServiceData }) => {
     const lastUpdated = new Date()
@@ -115,10 +114,16 @@ const ServicePage = async ({ params }: ServicePageProps) => {
         notFound();
     }
 
+    // Get other services for the sidebar (only slug and title to minimize client bundle)
+    const otherServices = Mock.Services
+        .filter(s => s.slug !== slug)
+        .slice(0, 4)
+        .map(s => ({ slug: s.slug, title: s.title }));
+
     return (
         <>
             <PageHero service={service} />
-            <ServicePageClient service={service} slug={slug} />
+            <ServicePageClient service={service} otherServices={otherServices} />
         </>
     )
 }

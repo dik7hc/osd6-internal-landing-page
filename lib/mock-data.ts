@@ -1,38 +1,6 @@
-import { ActivityData } from "@/app/our-activities/[slug]/page";
+import type { ActivityData, ServiceData } from "./types";
 
-export interface ServiceData {
-  slug: string;
-  title: string;
-  hero: {
-    paragraph: string;
-    customers: string;
-    headcount: string;
-    functions?: string;
-  };
-  overview: {
-    description: string;
-    sections: Array<{
-      title?: string;
-      content?: string;
-      items: Array<{
-        label?: string;
-        text: string;
-      }>;
-    }>;
-  };
-  standardProcess: {
-    description: string;
-    images: Array<{
-      title?: string;
-      imagePath: string;
-    }>;
-  };
-  relatedLinks?: Array<{
-    href: string;
-    linkText: string;
-    details: string;
-  }>;
-}
+export type { ActivityData, ServiceData };
 
 const Services: ServiceData[] = [
   {

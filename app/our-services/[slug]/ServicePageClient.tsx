@@ -4,12 +4,10 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import Mock, { ServiceData } from "@/lib/mock-data"
+import type { ServiceData } from "@/lib/types"
 import { ArrowRight } from "lucide-react"
 
-const OtherServicesList = ({ currentSlug }: { currentSlug: string }) => {
-    const otherServices = Mock.Services.filter(s => s.slug !== currentSlug).slice(0, 4);
-    
+const OtherServicesList = ({ otherServices }: { otherServices: Pick<ServiceData, 'slug' | 'title'>[] }) => {
     return (
         <nav className="space-y-4">
             {otherServices.map((service) => (
@@ -119,10 +117,10 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
 
 interface ServicePageClientProps {
     service: ServiceData;
-    slug: string;
+    otherServices: Pick<ServiceData, 'slug' | 'title'>[];
 }
 
-export const ServicePageClient = ({ service, slug }: ServicePageClientProps) => {
+export const ServicePageClient = ({ service, otherServices }: ServicePageClientProps) => {
     const [tab, setTab] = useState<number>(1)
 
     const selectTab = (tabId: number) => {
@@ -174,7 +172,7 @@ export const ServicePageClient = ({ service, slug }: ServicePageClientProps) => 
                         <h3 className="mb-5 text-lg font-semibold text-bosch_blue">
                             Other Services
                         </h3>
-                        <OtherServicesList currentSlug={slug} />
+                        <OtherServicesList otherServices={otherServices} />
                     </div>
                 </div>
             </div>
