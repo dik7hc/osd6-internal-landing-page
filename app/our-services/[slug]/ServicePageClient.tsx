@@ -156,7 +156,7 @@ export const ServicePageClient = ({ service, otherServices }: ServicePageClientP
                                         })}
                                         onClick={() => selectTab(3)}
                                     >
-                                        Process links
+                                        Related links
                                     </div>
                                 }
                             </nav>

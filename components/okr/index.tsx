@@ -13,13 +13,13 @@ const menuItems = [
         id: 1,
         title: 'Customer Satisfaction',
         iconSrc: '/svg/okrStatusIcons/customerSatisfaction.svg',
-        stats: { achieved: '-', onTrack: 3, inProgress: '-' }
+        stats: { achieved: 1, onTrack: 2, inProgress: '-' }
     },
     {
         id: 2,
         title: 'Business Growth',
         iconSrc: '/svg/okrStatusIcons/businessGrowth.svg',
-        stats: { achieved: 2, onTrack: 3, inProgress: '-' }
+        stats: { achieved: 3, onTrack: "-", inProgress: '-' }
     },
     {
         id: 3,
@@ -50,6 +50,13 @@ const DashboardComponent = () => {
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                     OKR Status
                 </h2>
+                <span className="shrink-0 pt-4 text-gray-500">
+                    Last Updated: {new Date("Dec 1, 2025").toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                    })}
+                </span>
             </div>
             <div className="flex gap-6">
 
@@ -161,8 +168,8 @@ const BusinessGrowth = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
-                            <span>60% business revenue growth in Q4.2025</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
+                            <span>60.0% business revenue growth in Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -176,7 +183,7 @@ const BusinessGrowth = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span>4 new service contracts within 2025</span>
                         </div>
                         <div className="flex items-start gap-2">
@@ -190,7 +197,7 @@ const BusinessGrowth = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span> 2 new service concepts introduced in 2025</span>
                         </div>
                         <div className="flex items-start gap-2">
@@ -216,7 +223,7 @@ const ValueOfService = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span>OPEX OSD6 transparency & standardization in Q3.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
@@ -231,14 +238,14 @@ const ValueOfService = () => {
                     <ArrowRight size={14} className="" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900 flex-shrink-0">Key Result:</span>
                             <span>Total service solutions to customer (full ownership) within 2025 </span>
                         </div>
                     <div>
                         <span className="font-bold text-slate-900 ">Progress:</span>
                         <ul className="list-disc list-outside ml-4 space-y-1 text-slate-700">
-                            <li>YTD %container utilization from HcP to K25M average 52.4% (compared 38% in 2024).</li>
-                            <li>%Container utilization from LAFIEN average 74% (compared to 41%)</li>
+                            <li>YTD %container utilization from HcP to K25M average 52.4% (compared 38.0% in 2024).</li>
+                            <li>%Container utilization from LAFIEN average 74.0% (compared to 41.0%)</li>
                         </ul>
                     </div>
                     </div>
@@ -248,8 +255,8 @@ const ValueOfService = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
-                            <span>At least 80% customer receiving emotional value when working with GS</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
+                            <span>At least 80.0% customer receiving emotional value when working with GS</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
@@ -274,7 +281,7 @@ const Digitalization = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span>Digitalization awareness assessment score &gt; 70/100 within 2025</span>
                         </div>
                         <div className="flex items-start gap-2">
@@ -288,12 +295,12 @@ const Digitalization = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span>2.5 HCs saved by digitalization & process improvement</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
-                            <span className="text-slate-700">2/2.5 HCs saved by Q2.2025</span>
+                            <span className="text-slate-700">2.0/2.5 HCs saved by Q2.2025</span>
                         </div>
                     </div>
                 </div>
@@ -302,7 +309,7 @@ const Digitalization = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span>Get 4 Digitalization success stories recognized by customers in Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
@@ -329,12 +336,12 @@ const CustomerSatisfaction = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
-                            <span>80 VoCs by Q4.2025</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
+                            <span>80 customer feedback collected in APAC regional plaform by Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
-                            <span className="text-slate-700">68/80 VoCs Collected</span>
+                            <span className="text-slate-700">68/80 customer feedback collected in APAC regional plaform Collected</span>
                         </div>
                     </div>
                 </div>
@@ -345,12 +352,12 @@ const CustomerSatisfaction = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
-                            <span>Average VoC rating 4.7/5 in Q4.2025</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
+                            <span>Average customer feedback collected in APAC regional plaform rating 4.8/5.0 in Q4.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
-                            <span className="text-slate-700">4.8/5 Rating on VoCs</span>
+                            <span className="text-slate-700">4.8/5 Rating on customer feedback collected in APAC regional plaform</span>
                         </div>
                     </div>
                 </div>
@@ -372,7 +379,7 @@ const CustomerSatisfaction = () => {
                     <div className="space-y-1">
 
                         <div className="flex items-start gap-2 text-slate-700">
-                        <span>Target:</span>
+                        <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                         <span>UX ML3 by Q4.2025</span>
                     </div>
                     <div>
@@ -380,7 +387,7 @@ const CustomerSatisfaction = () => {
                         <ul className="list-disc list-outside ml-4 space-y-1 text-slate-700">
                             <li>Completed 1 UX Project & 3 UXcellent workshops.</li>
                             <li>2 new UX/UI designers from Digi team</li>
-                            <li>Maintain 100% internal associates finished UX0</li>
+                            <li>Maintain 100.0% internal associates finished UX0</li>
                             <li>UX Champion Lead join UX ML4 audit</li>
                         </ul>
                     </div>
@@ -405,12 +412,12 @@ const OrganizationCapability = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
-                            <span>7% capacity dedicated to self-development in Q2.2025</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
+                            <span>7.0% capacity dedicated to self-development in Q2.2025</span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>
-                            <span className="text-slate-700">7% capacity already dedicated to L&D Activities by Q2.2025</span>
+                            <span className="text-slate-700">7.0% capacity already dedicated to L&D Activities by Q2.2025</span>
                         </div>
                     </div>
                 </div>
@@ -428,7 +435,7 @@ const OrganizationCapability = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
                             <span>OSD6 Competency Matrix & Learning Curriculum defined in Q2.2025 </span>
                         </div>
                         <div className="flex items-start gap-2">
@@ -442,8 +449,8 @@ const OrganizationCapability = () => {
                     <ArrowRight size={14} className="mt-1" />
                     <div className="space-y-1">
                         <div className="flex items-start gap-2 text-slate-700">
-                            <span>Target:</span>
-                            <span>20% of associates can act/ serve as a proxy for other tasks </span>
+                            <span className="font-bold text-slate-900  flex-shrink-0">Key Result:</span>
+                            <span>20.0% of associates can act/ serve as a proxy for other tasks </span>
                         </div>
                         <div className="flex items-start gap-2">
                             <span className="font-bold text-slate-900">Progress:</span>

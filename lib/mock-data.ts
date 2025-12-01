@@ -102,7 +102,7 @@ const Services: ServiceData[] = [
         "The Inbound Control service is structured around three key activities: Shipment Tracking, I-star Creation, and Goods Receipt.",
       sections: [
         {
-          title: "1. Real-Time Shipment Tracking",
+          title: "1. Real-Time Inbound Control",
           content:
             "This process focuses on maintaining continuous, end-to-end visibility of all materials scheduled for delivery, from the moment they depart the supplier until they arrive at our receiving warehouse.",
           items: [
@@ -132,7 +132,7 @@ const Services: ServiceData[] = [
           ]
         },
         {
-          title: "3. Goods Receipt and Verification",
+          title: "3. Inbound Coordination and Verification",
           content:
             "This activity is the final administrative confirmation that the materials have been successfully transferred from the carrier into our inventory system, marking the start of internal accountability.",
           items: [
@@ -152,18 +152,18 @@ const Services: ServiceData[] = [
       description: "",
       images: [
         {
-          title: "Shipment Tracking:  ",
+          title: "Inbound Control: ",
           imagePath:
             "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726632/inbound_control_shipment_tracking_jjs9g3.png"
         },
-        {
-          title: "Istar:",
-          imagePath:
-            "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726626/inbound_control_Istar_acqwcc.png"
-        },
+        // {
+        //   title: "Istar:",
+        //   imagePath:
+        //     "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726626/inbound_control_Istar_acqwcc.png"
+        // },
         {
           title:
-            "Goods Receipt: The goods receipt process is divided into a process where WH have access to the system and where WH do not have access to the system.",
+            "Inbound Coordination: The goods receipt process is divided into a process where WH have access to the system and where WH do not have access to the system.",
           imagePath:
             "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763726627/inbound_control_GR_Process_oy4j13.png"
         }

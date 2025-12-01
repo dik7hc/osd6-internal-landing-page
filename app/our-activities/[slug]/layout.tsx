@@ -17,8 +17,8 @@ const OurActivitiesLayout = async ({
 
     return (
         <>
-            {children}
             <div className=" mx-auto max-w-7xl bg-white px-4 py-12 font-sans text-gray-800 sm:px-6 lg:px-8">
+                {children}
                 <h2 className="mb-10 text-center text-3xl font-bold">Other Activities</h2>
                 {/* <div className="my-8 flex items-center justify-end gap-4">
                     <button

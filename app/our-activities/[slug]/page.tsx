@@ -6,14 +6,11 @@ import {
     BreadcrumbPage,
     BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import Mock from '@/lib/mock-data';
-import { cn } from '@/lib/utils';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import type { ActivityData } from '@/lib/types';
-
-export type { ActivityData };
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { getAllActivitySlugs, getActivityBySlug } from '@/lib/mdx';
+import { getMDXComponents } from '@/mdx-components';
 
 interface ActivitiesPageProps {
     params: Promise<{
@@ -21,8 +18,12 @@ interface ActivitiesPageProps {
     }>;
 }
 
-const getActivityBySlug = (slug: string) => {
-    return Mock.Activities.find(a => a.slug.trim() === slug)
+const mdxComponents = getMDXComponents({});
+
+// Generate static paths for all activities
+export async function generateStaticParams() {
+    const slugs = getAllActivitySlugs();
+    return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: ActivitiesPageProps): Promise<Metadata> {
@@ -36,7 +37,8 @@ export async function generateMetadata({ params }: ActivitiesPageProps): Promise
     }
 
     return {
-        title: `${activity.title} | SD6 | Bosch Việt Nam`,
+        title: `${activity.frontmatter.title} | SD6 | Bosch Việt Nam`,
+        description: activity.frontmatter.description,
     };
 }
 
@@ -60,100 +62,52 @@ const PageBreadCrumb = ({ title }: { title: string }) => {
 
 const ServiceHighlightPage = async ({ params }: ActivitiesPageProps) => {
     const { slug } = await params;
+    const highlight = getActivityBySlug(slug);
 
-    const activity = getActivityBySlug(slug)
-
-    if (!activity) {
+    if (!highlight) {
         notFound();
     }
 
+    const { frontmatter, content } = highlight;
+
     return (
-        <main className="mx-auto max-w-7xl bg-white px-4 py-12 font-sans text-gray-800 sm:px-6 lg:px-8">
-            <PageBreadCrumb title={activity.title} />
-            <div className="mb-8 flex items-start justify-between">
-                <h1 className="text-5xl font-bold">{activity.title}</h1>
-            </div>
-            <div className="leading-relaxed text-gray-700 ">
-                <div className="space-y-4">
-                    {activity.content.map((paragraph, index) => (
-                        <>
-                            <p key={index}>{paragraph}</p>
-                            {index == 0 && <div className="mb-4">
-                                <div className={cn("max-w-3xl mx-auto", {
-                                    "max-w-7xl": activity.mainImages.length >= 3
-                                })}>
-                                    {activity.mainImages.length >= 3 ? (
-                                        <div className="grid grid-cols-2 gap-4 ">
-                                            {/* First column - large image with row span 2 */}
-                                            <div className="row-span-2">
-                                                <Image 
-                                                    src={activity.mainImages[0]} 
-                                                    width={1920} 
-                                                    height={1080} 
-                                                    alt={`${activity.mainImageCaption} 1`} 
-                                                    className="w-full h-full object-cover" 
-                                                />
-                                            </div>
-                                            {/* Second column - two smaller images in 2 rows */}
-                                            <div className="grid grid-cols-2 gap-4">
-                                                {activity.mainImages.slice(1, activity.mainImages.length).map((image, imgIndex) => (
-                                                    <Image 
-                                                        key={imgIndex + 1}
-                                                        src={image} 
-                                                        width={1920} 
-                                                        height={1080} 
-                                                        alt={`${activity.mainImageCaption} ${imgIndex + 2}`} 
-                                                        className="w-full h-full aspect-[4/3] object-cover flex-grow" 
-                                                    />
-                                                ))}
-                                            
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <div className={cn("grid gap-4", {
-                                            "grid-cols-1": activity.mainImages.length == 1,
-                                            "grid-cols-2": activity.mainImages.length == 2,
-                                        })}>
-                                            {activity.mainImages.map((image, imgIndex) => (
-                                                <Image 
-                                                    key={imgIndex}
-                                                    src={image} 
-                                                    width={1920} 
-                                                    height={1080} 
-                                                    alt={`${activity.mainImageCaption} ${imgIndex + 1}`} 
-                                                    className="w-full h-auto aspect-[4/3] object-cover" 
-                                                />
-                                            ))}
-                                        </div>
-                                    )}
-                                    
-                                    <p className="mt-2 text-sm text-gray-500 text-center">{activity.mainImageCaption}</p>
-                                </div>
-                            </div>}
-                        </>
-                    ))}
+        <>
+            <PageBreadCrumb title={frontmatter.title}/>
+            <div className="my-8 flex items-start justify-between">
+                <div>
+                    <h1 className="text-5xl font-bold">{frontmatter.title}</h1>
+                    <p className="mt-4 text-lg tracking-tight text-gray-600">
+                        {frontmatter.description}
+                    </p>
                 </div>
+                <span className="shrink-0 pt-4 text-gray-500">
+                    {new Date(frontmatter.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                    })}
+                </span>
+            </div>
+
+            <div className="leading-relaxed text-gray-700">
+                <div className="prose prose-gray max-w-none">
+                    <MDXRemote source={content} components={mdxComponents} />
+                </div>
+
                 <div className="clear-both"></div>
             </div>
-            <div className="my-12 grid grid-cols-2 gap-4 md:grid-cols-4">
-                {activity.galleryImages?.map((image, index) => (
-                    <div key={index} className="aspect-square bg-gray-200">
-                        <img src={image} alt={`Gallery image ${index + 1}`} className="size-full object-cover" />
+
+            <div className="mt-12 flex items-center justify-between border-t border-gray-200 pt-4">
+                <p className="text-gray-600">{frontmatter.author || 'GS/OSD Team'}</p>
+                {frontmatter.tags && frontmatter.tags.length > 0 && (
+                    <div className="flex gap-4 text-gray-500">
+                        {frontmatter.tags.map((tag, i) => (
+                            <span key={i}>#{tag}</span>
+                        ))}
                     </div>
-                ))}
+                )}
             </div>
-            <div className="mt-12 flex items-center justify-between border-t border-gray-200 pt-4 text-gray-600">
-                <p>{activity.author}</p>
-                <span className="shrink-0">Posted On: {activity.date}</span>
-
-                {/* <div className="flex gap-4 text-gray-500">
-                    {activity.hashtags.map((tag, index) => (
-                        <span key={index}>{tag}</span>
-                    ))}
-                </div> */}
-            </div>
-
-        </main>
+        </>
     );
 };
 
