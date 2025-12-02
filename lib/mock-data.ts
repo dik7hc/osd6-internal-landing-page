@@ -61,28 +61,29 @@ const Services: ServiceData[] = [
     },
     relatedLinks: [
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736081/OSD6AP2-13-2_Procurement_Plannng_-_An_Overview_nacgff.pdf",
-        linkText: "Procurement Planning - an overview",
-        details: "Procure Planning - an overview"
+        href: "",
+        linkText: "OSD6AP2-13_Procurement_Planning_Procedure",
+        details: "Procurement Planning Procedure"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736081/OSD6AP2-13_Procurement_Planning_Procedure_mgftlb.pdf",
-        linkText: "Procurement Planning Procedure",
-        details: "Procurement Planning standardized process"
+        href: "",
+        linkText: "OSD6AP2-13-02_Procurement_Planning_-_An_Overview",
+        details: "Procurement Planning - An Overview"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736082/OSD6AP2-13-3_Creating_Scheduling_Agreement_Releases_sq6bzy.pdf",
-        linkText: "Creating scheduling agreement documentation",
-        details: "Create schedule agreement releases"
+        href: "",
+        linkText: "OSD6AP2-13-03-01_Creating_Scheduling_Agreement_Releases",
+        details: "Creating Scheduling Agreement Releases"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736084/OSD6AP2-13-3_Creating_Purchase_Order_with_Purchase_Requisition_Number_qbvtof.pdf",
-        linkText: "Creating purchase order wi documentation",
-        details: "Creating purchase order with purchase requisition number"
+        href: "",
+        linkText:
+          "OSD6AP2-13-03-02_Creating_Purchase_Order_with_Purchase_Requisition_Number",
+        details: "Creating Purchase Order with Purchase Requisition Number"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736082/OSD6AP2-13-3_Modifying_MM_Delivery_Schedule_Lines_cfeohp.pdf",
-        linkText: "Modifying MM Delivery Schedule Lines",
+        href: "",
+        linkText: "OSD6AP2-13-03-03_Modifying_MM_Delivery_Schedule_Lines",
         details: "Modifying MM Delivery Schedule Lines"
       }
     ]
@@ -171,49 +172,56 @@ const Services: ServiceData[] = [
     },
     relatedLinks: [
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738780/OSD6AP2-15_Shipment_Tracking_and_Monitoring_Procedure_t4yq7o.pdf",
-        linkText: "MA Shipment Tracking & Monitoring",
-        details: "Shipment Tracking & Monitoring WI"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764651011/OSD6AP2-13-02_iSTAR_Process.pdf",
+        linkText: "OSD6AP2-13-02 iStar Process",
+        details: "iStar Process documentation"
       },
       {
-        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-01-Goods%20Receipt%20Tracking%20File.xlsx?d=w92699ad9b4f64462ab7787eba5fe0c33&csf=1&web=1&e=b52vhc",
-        linkText: "Inbound Tracking MA - APAC",
-        details: "MA Inbound Tracking File"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649414/OSD6AP2-13-02-01_MA_ISTAR_Process.pdf",
+        linkText: "OSD6AP2-13-02-01 MA ISTAR Process",
+        details: "MA ISTAR Process"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738781/OSD6AP2-13-3_iSTAR_WI_for_NonJP_MA_ztwbhg.pdf",
-        linkText: "Istar APAC WI",
-        details: "Non-JP MA Istar Work Instructions"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649413/OSD6AP2-13-02-02_PSLOP_ISTAR.pdf",
+        linkText: "OSD6AP2-13-02-02 PSLOP_ISTAR",
+        details: "PSLOP ISTAR documentation"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738780/OSD6AP2-13-2_MA_ISTAR_Process_yjvngs.pdf",
-        linkText: "MA Istar Process",
-        details: "MA Istar Process Map"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649412/OSD6AP2-13-03-01_Manual__ISTAR_Creation_Process_For_JP.pdf",
+        linkText: "OSD6AP2-13-03-01 (Manual) ISTAR Creation for JP",
+        details: "Manual ISTAR Creation for JP"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738780/OSD6AP2-13-2_PSLOP_ISTAR_gxf4xh.pdf",
-        linkText: "PS Istar Process",
-        details: "PS Istar Process Map"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649410/OSD6AP2-13-3_iSTAR_WI_for_NonJP_MA_voaxvf.pdf",
+        linkText: "OSD6AP2-13-03-02 ISTAR WI for NonJP (MA)",
+        details: "ISTAR WI for NonJP MA"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763738781/OSD6AP2-13-3_Manual__ISTAR_Creation_Process_For_JP_a0i9fl.pdf",
-        linkText: "Manual Istar WI",
-        details: "JP Istar Work Instruction"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649407/OSD6AP2-15_Shipment_Tracking_and_Monitoring_Procedure.pdf",
+        linkText: "OSD6AP2-15 Shipment Tracking and Monitoring Procedure",
+        details: "Shipment Tracking and Monitoring Procedure"
       },
       {
-        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/Shared%20Documents/Process%20Flow%20and%20Work%20Instructions/OSD6%20-%20APAC23/4.%20GR%20Coordination/OSD6AP2-17-01-01-Goods%20Receipt%20Tracking%20File.xlsx?d=w92699ad9b4f64462ab7787eba5fe0c33&csf=1&web=1&e=b52vhc",
-        linkText: "Delivery notice for SEA",
-        details: "Template of a delivery notice to warehouse staff"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764650802/OSD6AP2-17_Good_Receipt_Coordination_Procedure.pdf",
+        linkText: "OSD6-AP2-17 Good Receipt Coordination Procedure",
+        details: "Good Receipt Coordination Procedure"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764318429/OSD6AP2-17-01-03-Delivery_Notice_To_Warehouse_Template_AIR_COURIER_oaftab.pdf",
-        linkText: "Delivery notice for AIR & COURIER",
-        details: "Template of a delivery notice to warehouse staff"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649408/OSD6AP2-17-01-01-Goods_Receipt_Tracking_File.pdf",
+        linkText: "OSD6AP2-17-01-01 Goods Receipt Tracking File",
+        details: "Goods Receipt Tracking File"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764318429/OSD6AP2-17-01-01-Goods_Receipt_Tracking_File_vtzbwq.pdf",
-        linkText: "Goods Receipt tracking file",
-        details: "Tracking file for goods receipt"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764650802/OSD6AP2-17-01-02-Delivery_Notice_To_Warehouse_Template_SEA.pdf",
+        linkText:
+          "OSD6AP2-17-01-02 Delivery Notice to Warehouse Template (SEA)",
+        details: "Delivery Notice to Warehouse Template SEA"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649406/OSD6AP2-17-01-03-Delivery_Notice_To_Warehouse_Template_AIR_COURIER.pdf",
+        linkText:
+          "OSD6AP2-17-01-03 Delivery Notice To Warehouse Template (AIR&COURIER)",
+        details: "Delivery Notice To Warehouse Template AIR and COURIER"
       }
     ]
   },
@@ -282,14 +290,35 @@ const Services: ServiceData[] = [
         details: "Inventory Management Stocking Policy WI"
       },
       {
-        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/_layouts/15/Doc.aspx?sourcedoc=%7BBADE1AB1-337C-491C-8A17-60ABBF44083E%7D&file=OSD6AP2-12-02-01_BOD%20Matrix.xlsx&action=default&mobileredirect=true)",
-        linkText: "BOD Matrix",
-        details: "Inventory Management Stocking Policy WI"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649515/OSD6AP2-11_Internal_Audit_Procedure.pdf",
+        linkText: "OSD6AP2-11_Internal_Audit_Procedure",
+        details: "Internal Audit Procedure"
       },
       {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764644305/OSD6AP2-11_Internal_Audit_Procedure_cfyvjk.pdf",
-        linkText: "Internal Audit Procedure",
-        details: "Inventory Management Stocking Policy WI"
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764655623/OSD6AP2-12_Material_Master_Data_Management_Procedure.pdf",
+        linkText: "OSD6AP2-12_Material_Master_Data_Management_Procedure",
+        details: "Material Master Data Management Procedure"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649514/OSD6AP2-12-01-01_New_vendor_connection_setup.pdf",
+        linkText: "OSD6AP2-12-01-01_New_vendor_connection_setup",
+        details: "New vendor connection setup"
+      },
+      {
+        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/_layouts/15/Doc.aspx?sourcedoc=%7BBADE1AB1-337C-491C-8A17-60ABBF44083E%7D&file=OSD6AP2-12-02-01_BOD%20Matrix.xlsx&action=default&mobileredirect=true)&isSPOFile=1&xsdata=MDV8MDJ8fDhjZjFmOGMyYThiZjRiNWQwNWQ4MDhkZTMwYjg2MTRlfDBhZTUxZTE5MDdjODRlNGJiYjZkNjQ4ZWU1ODQxMGY0fDB8MHw2MzkwMDE3NjU1OTc4MDgwODh8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pRNU0ySmpaVFEzTFdOa1lqVXRORFEwWWkwNVkySXhMV1kzTVdRNU1ESXlZMlF4TTE5bFl6RXpaREZtWkMxaU5XTm1MVFF5TVRrdE9UUTFZUzFtWkRsbE1HVmlaRGd6WW1OQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjMk5EVTNPVGMxTnpVeE5RPT18ZmRkNzhmMDMyMTk0NDc2YTkzNTYwOGRlMzBiODYxNGR8MDIxMmU3NmQxOGQ1NGY3Yzg3MGQ1ZjljMDE1Zjc5OGI%3D&sdata=V1pwcHJzS1dyTjY0c0FSTXcxbjlZVG51THd6VEdGTk1lWnBTNWNPSEpnRT0%3D&ovuser=0ae51e19-07c8-4e4b-bb6d-648ee58410f4%2Cpga7hc%40bosch.com",
+        linkText: "OSD6AP2-12-02-01 (Excel link)",
+        details: "Excel link document"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649511/OSD6APC-12-02-02_Source_Creation_for_source_change_stock_transfer_process.pdf",
+        linkText: "OSD6AP2-12-02-02_Source_Creation",
+        details: "Source Creation"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649510/OSD6APC-12-02-03_Master_data_housekeeping_for_new_release_PN.pdf",
+        linkText:
+          "OSD6AP2-12-02-03_Master_data_housekeeping_for_new_release_PN",
+        details: "Master data housekeeping for new release PN"
       }
     ]
   },
