@@ -282,7 +282,7 @@ function MDXImage(props: ComponentPropsWithoutRef<'img'>) {
     const isExternal = src.startsWith('http://') || src.startsWith('https://');
 
     return (
-        <Image
+        <img
             src={src}
             alt={alt || ''}
             title={title}

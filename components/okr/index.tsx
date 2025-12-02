@@ -73,13 +73,12 @@ const DashboardComponent = () => {
                             <div className="flex items-start gap-4">
                                 {/* Icon Container */}
                                 <div className="mt-1 text-slate-800">
-                                    <Image
+                                    <img
                                         src={item.iconSrc}
                                         alt={`${item.title} icon`}
                                         width={32}
                                         height={32}
-                                        priority={false}
-                                        quality={20}
+                                        
                                     />
                                 </div>
 
@@ -92,7 +91,7 @@ const DashboardComponent = () => {
                                         {/* Achieved (Green) */}
                                         <div className="flex items-center gap-1 text-bosch_green">
                                             <div className="bg-bosch_green text-white p-[1px]">
-                                                <Image src={"/svg/okrStatusIcons/achievedIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                                                <img src={"/svg/okrStatusIcons/achievedIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3'   />
                                             </div>
                                             <span className={cn(item.stats.achieved === '-' && 'text-slate-400')}>
                                                 {activeTab === item.id && (item.stats.achieved === '-' ? 'Achieved: -' : `Achieved: ${item.stats.achieved}`)}
@@ -103,7 +102,7 @@ const DashboardComponent = () => {
                                         {/* On Track (Blue) */}
                                         <div className="flex items-center gap-1 text-sky-600">
                                             <div className="bg-sky-600  p-[1px]">
-                                                <Image src={"/svg/okrStatusIcons/onTrackIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                                                <img src={"/svg/okrStatusIcons/onTrackIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3'   />
                                             </div>
                                             <span className={cn(item.stats.onTrack === '-' && 'text-slate-400')}>
                                                 {activeTab === item.id && (item.stats.onTrack === '-' ? 'On Track: -' : `On Track: ${item.stats.onTrack}`)}
@@ -115,7 +114,7 @@ const DashboardComponent = () => {
                                         {/* In Progress (Red) */}
                                         <div className="flex items-center gap-1 text-red-500">
                                             <div className="bg-red-500 p-[1px]">
-                                                <Image src={"/svg/okrStatusIcons/inProgressIcon.svg"} width={10} height={10} alt="In Progress Logo" className='size-3' quality={5} priority={false} />
+                                                <img src={"/svg/okrStatusIcons/inProgressIcon.svg"} width={10} height={10} alt="In Progress Logo" className='size-3'   />
                                             </div>
                                             <span className={cn(item.stats.inProgress === '-' && 'text-slate-400')}>
                                                 {activeTab === item.id && (item.stats.inProgress === '-' ? 'In Progress: -' : `In Progress: ${item.stats.inProgress}`)}
@@ -470,7 +469,7 @@ const StatusBadge = ({ status, showStatus = false }: { status: "On Track" | "In 
             status == "Achieved" && (
                 <div className="flex items-center gap-1 text-bosch_green">
                     <div className="bg-bosch_green text-white p-[1px]">
-                        <Image src={"/svg/okrStatusIcons/achievedIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                        <img src={"/svg/okrStatusIcons/achievedIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3'   />
                     </div>
                     <span className='text-bosch_green'>{showStatus && status}</span>
                 </div>
@@ -480,7 +479,7 @@ const StatusBadge = ({ status, showStatus = false }: { status: "On Track" | "In 
             status == "On Track" && (
                 <div className="flex items-center gap-1 text-bosch_blue">
                     <div className="bg-bosch_blue text-white p-[1px]">
-                        <Image src={"/svg/okrStatusIcons/onTrackIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3' quality={5} priority={false} />
+                        <img src={"/svg/okrStatusIcons/onTrackIcon.svg"} width={10} height={10} alt="On Track Logo" className='size-3'   />
                     </div>
                     <span className='text-bosch_blue'>{showStatus && status}</span>
                 </div>
@@ -490,7 +489,7 @@ const StatusBadge = ({ status, showStatus = false }: { status: "On Track" | "In 
             status == "In Progress" && (
                 <div className="flex items-center gap-1 text-red-500">
                     <div className="bg-red-500 text-white p-[1px]">
-                        <Image src={"/svg/okrStatusIcons/inProgressIcon.svg"} width={10} height={10} alt="In Progress Logo" className='size-3' quality={5} priority={false} />
+                        <img src={"/svg/okrStatusIcons/inProgressIcon.svg"} width={10} height={10} alt="In Progress Logo" className='size-3'   />
                     </div>
                     <span className='text-red-500'>{showStatus && status}</span>
                 </div>

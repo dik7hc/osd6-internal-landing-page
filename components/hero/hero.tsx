@@ -34,7 +34,7 @@ const HeroSection = () => {
 
 const Logo: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <Image
+    <img
       src={"/svg/logo.svg"}
       alt="sd6 Logo"
       width={150}

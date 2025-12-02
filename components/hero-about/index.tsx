@@ -17,12 +17,11 @@ const HeroAboutSection = () => {
                     </div>
                 </div>
                 <div className="h-80 w-full rounded-lg bg-gray-200">
-                    <Image
+                    <img
                         alt='bosch-hero-section'
                         src={'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1757663285/be-likabosch_yet7y1.webp'}
                         width={1600}
                         height={900}
-                        priority
                         fetchPriority='high'
                     />
                 </div>

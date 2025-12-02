@@ -323,7 +323,7 @@ const Department = ({ department }: DepartmentProps) => (
                 <div key={teamIndex} className="flex-1 space-y-4">
                     {team.map((member, memberIndex) => (
                         <div key={memberIndex} className="group flex items-center gap-3">
-                            <Image
+                            <img
                                 src={member.image}
                                 alt={member.name}
                                 width={40}
@@ -372,7 +372,7 @@ const OrganizationChart = () => {
                         >
                             {
                                 org.manager.image ?
-                                    <Image
+                                    <img
                                         src={org.manager.image}
                                         alt={org.manager.name}
                                         width={64}

@@ -17,7 +17,7 @@ const Footer = () => {
         <footer className="bg-gray-300" >
             <div className="mx-auto flex max-w-7xl  justify-between px-4 py-3 sm:px-6 lg:px-8">
 
-                <Image src={'/svg/logoGS.svg'} alt='General Service Logo' width={250} height={50} className='scale-105'/>
+                <img src={'/svg/logoGS.svg'} alt='General Service Logo' width={250} height={50} className='scale-105'/>
 
                 <div className="grid grid-cols-2 gap-8 py-7 text-right md:grid-cols-3">
                     {/* Single Link: Home Page */}

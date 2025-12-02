@@ -47,7 +47,7 @@ const AboutValuesAccordion = () => {
                 <AccordionItem key={item.id} value={item.id} className="border-b border-gray-300">
                     <AccordionTrigger className="py-4 text-left hover:no-underline">
                         <div className="flex items-center">
-                            <Image
+                            <img
                                 src={item.icon}
                                 alt={`${item.title} icon`}
                                 width={24}

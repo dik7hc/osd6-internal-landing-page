@@ -27,7 +27,7 @@ const StatCard = ({ value, label, icon }: { value: string, label: string, icon: 
             <div className="text-base text-gray-500">{label}</div>
         </div>
         <div className="flex items-center gap-1 text-gray-400">
-            <Image
+            <img
                 src={icon}
                 alt={`${label} icon`}
                 width={28}

@@ -68,12 +68,12 @@ const StandardProcess = ({ data }: { data: ServiceData['standardProcess'] }) => 
                             {image.title}
                         </h3>
                     )}
-                    <Image 
+                    <img 
                         alt={image.title || `Standard Process ${index + 1}`} 
                         src={image.imagePath} 
                         width={884} 
                         height={1084} 
-                        quality={50}
+                        // quality={50}
                     />
                 </div>
             ))}

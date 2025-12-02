@@ -11,13 +11,12 @@ function StoryCard({subtitle, img, title, imageAlt} : StoryProps) {
     return (
         <article className=" border border-slate-200 bg-gray-100 shadow-sm hover:cursor-pointer hover:text-bosch_blue dark:border-slate-800 dark:bg-slate-950">
             <a href="#">
-                <Image
+                <img
                     src={img}
                     alt={imageAlt ?? "Blog cover"}
                     width={400}
                     height={250}
                     className=" h-auto w-full object-cover"
-                    unoptimized
                 />
             </a>
             <div className="p-5">

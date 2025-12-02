@@ -53,13 +53,11 @@ const Highlights = () => {
                     >
                         <div className='h-3 w-full hidden inset-0 bg-bosch_blue absolute group-hover:block'></div>
                         {/* Icon */}
-                        <Image
+                        <img
                             src={service.icon}
                             alt={`${service.name} icon`}
                             width={48}
                             height={48}
-                            quality={20}
-                            priority={false}
                             className={cn({ "h-12": index == 4 || index == 0 })}
                         />
 

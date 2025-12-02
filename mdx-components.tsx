@@ -21,14 +21,14 @@ function MDXImage(props: ComponentPropsWithoutRef<'img'>) {
     const isExternal = src.startsWith('http://') || src.startsWith('https://');
 
     return (
-        <Image
+        <img
             src={src}
             alt={alt || ''}
             title={title}
             width={800}
             height={600}
             className="h-full w-full object-cover"
-            unoptimized={isExternal}
+            // unoptimized={isExternal}
         />
     );
 }

@@ -13,7 +13,7 @@ export const ExperienceDayCard = ({ content, mainImageCaption, mainImages, slug,
     return (
         <Card className="group relative overflow-hidden border-none rounded-none bg-gray-200 cursor-pointer p-0">
             <div>
-                <Image
+                <img
                     src={imageSrc}
                     alt={mainImageCaption}
                     width={1200}

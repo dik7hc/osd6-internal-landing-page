@@ -56,7 +56,7 @@ interface TabContentProps {
 
 const TabContent: React.FC<TabContentProps> = ({ image, description, color }) => (
     <div className="flex justify-between gap-6">
-        <Image
+        <img
             src={image}
             alt="Portfolio section"
             width={360}

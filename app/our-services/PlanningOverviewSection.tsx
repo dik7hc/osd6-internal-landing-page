@@ -79,7 +79,7 @@ const StandardProcess = () => {
         <p className="mb-11">
                 The following process map visually outlines the essential steps and review stages of the Procurement Planning process, ensuring a synchronized and efficient approach to material acquisition and scheduling. 
         </p>
-        <Image alt="StandardProcessPlanning" src={"/images/StandardProcessPlanning.png"} width={884} height={1084} quality={50}/>
+        <img alt="StandardProcessPlanning" src={"/images/StandardProcessPlanning.png"} width={884} height={1084} />
           
     </>)
 }

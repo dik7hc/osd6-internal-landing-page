@@ -16,23 +16,22 @@ const Header = ({
                         <Menu />
                     </Button> */}
                     <div className="flex items-center">
-                        <Image
+                        <img
                             width={55}
                             height={40}
                             src="/svg/logo.svg"
                             alt="Logo"
-                            quality={20}
+                            // quality={20}
                             className=" scale-75" //-ml-7
                         />
                         {children}
                     </div>
                     <Link href={"/"}>
-                        <Image
+                        <img
                             width={144}
                             height={96}
                             src="/images/bosch_logo_de.svg"
                             alt="Logo"
-                            quality={20}
                             className="scale-75"
                         />
                     </Link>
