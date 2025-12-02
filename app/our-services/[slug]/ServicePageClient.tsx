@@ -87,7 +87,7 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
         <div className="w-full text-gray-700">
             <div className="grid grid-cols-2 gap-4 border-b-2 border-gray-400 px-4 py-3 font-bold text-gray-900">
                 <h3>Related Links</h3>
-                <h3>More Details</h3>
+                {/* <h3>More Details</h3> */}
             </div>
 
             {/* Table Body */}
@@ -105,9 +105,9 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
                             </a>
                         </div>
 
-                        <div className="text-gray-800">
+                        {/* <div className="text-gray-800">
                             {item.details}
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>

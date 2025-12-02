@@ -280,6 +280,16 @@ const Services: ServiceData[] = [
         href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/Inventory_Management_Stocking_Policy_srhrps.pdf",
         linkText: "Stocking Policy",
         details: "Inventory Management Stocking Policy WI"
+      },
+      {
+        href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/_layouts/15/Doc.aspx?sourcedoc=%7BBADE1AB1-337C-491C-8A17-60ABBF44083E%7D&file=OSD6AP2-12-02-01_BOD%20Matrix.xlsx&action=default&mobileredirect=true)",
+        linkText: "BOD Matrix",
+        details: "Inventory Management Stocking Policy WI"
+      },
+      {
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764644305/OSD6AP2-11_Internal_Audit_Procedure_cfyvjk.pdf",
+        linkText: "Internal Audit Procedure",
+        details: "Inventory Management Stocking Policy WI"
       }
     ]
   },
