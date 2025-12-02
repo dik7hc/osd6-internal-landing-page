@@ -85,7 +85,7 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
     if (!links) return null
     return (
         <div className="w-full text-gray-700">
-            <div className="grid grid-cols-2 gap-4 border-b-2 border-gray-400 px-4 py-3 font-bold text-gray-900">
+            <div className=" gap-4 border-b-2 border-gray-400 px-4 py-3 font-bold text-gray-900">
                 <h3>Related Links</h3>
                 {/* <h3>More Details</h3> */}
             </div>
@@ -93,8 +93,7 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
             {/* Table Body */}
             <div className="divide-y divide-black">
                 {links.map((item, index) => (
-                    <div key={index} className="grid grid-cols-2 gap-4 px-4 py-3">
-                        <div>
+                    <div key={index} className="  px-4 py-3">
                             <a
                                 href={item.href}
                                 target="_blank"
@@ -103,8 +102,6 @@ const RelatedLinks = ({ links }: { links: ServiceData['relatedLinks'] }) => {
                             >
                                 {item.linkText}
                             </a>
-                        </div>
-
                         {/* <div className="text-gray-800">
                             {item.details}
                         </div> */}

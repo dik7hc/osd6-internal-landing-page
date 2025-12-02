@@ -109,11 +109,11 @@ const Services: ServiceData[] = [
           items: [
             {
               label: "Core Responsibility:",
-              text: "Monitor supplier performance and transit milestones against expected delivery dates. Proactively communicate and manage exceptions with logistics providers and internal stakeholders (eg: shipment delays, import/export documentations, etc)"
+              text: "Monitor supplier performance and transit milestones against expected delivery dates. Proactively communicate and manage exceptions with logistics providers and internal stakeholders (eg: shipment delays, import/export documentations, etc). Raise, maintain, and track the ISTAR Creation process - a mandatory pre-authorization step that monitors the change in shipment mode, before order is changed & released."
             },
             {
               label: "Outcome:",
-              text: "Ensure accurate documentation required for importing process. Minimizes demurrage and detention charges by ensuring resources are ready upon arrival, and allows internal functions to plan production or distribution based on confirmed material availability."
+              text: "Help gather data to monitor source planning capability, by tracking actual cost vs. estimated cost of shipment mode change. Ensure accurate documentation required for importing process. Minimizes demurrage and detention charges by ensuring resources are ready upon arrival, and allows internal functions to plan production or distribution based on confirmed material availability."
             }
           ]
         },
@@ -264,31 +264,31 @@ const Services: ServiceData[] = [
       ]
     },
     relatedLinks: [
-      {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/MA_IB_New_vendor_setup_gvr6pd.pdf",
-        linkText: "Vendor Connection Set-up",
-        details: "New Vendor Connection Set-up WI"
-      },
-      {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/MA_IB_Manual_Master_Data_Maintenance_fqchly.pdf",
-        linkText: "Manual Master Data Maintenance",
-        details: "Manual Master Data Maintenance WI"
-      },
-      {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735213/MA_IB_Source_Creation_for_source_change_stock_transfer_process_p5yjs3.pdf",
-        linkText: "Source Creation",
-        details: "Source creation for Source Change & Stock Transfer Process WI"
-      },
-      {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735213/MA_IB_Master_data_housekeeping_for_new_release_PN_yflmop.pdf",
-        linkText: "Master Data Housekeeping",
-        details: "Master data housekeeping for new release PN"
-      },
-      {
-        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/Inventory_Management_Stocking_Policy_srhrps.pdf",
-        linkText: "Stocking Policy",
-        details: "Inventory Management Stocking Policy WI"
-      },
+      // {
+      //   href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/MA_IB_New_vendor_setup_gvr6pd.pdf",
+      //   linkText: "Vendor Connection Set-up",
+      //   details: "New Vendor Connection Set-up WI"
+      // },
+      // {
+      //   href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/MA_IB_Manual_Master_Data_Maintenance_fqchly.pdf",
+      //   linkText: "Manual Master Data Maintenance",
+      //   details: "Manual Master Data Maintenance WI"
+      // },
+      // {
+      //   href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735213/MA_IB_Source_Creation_for_source_change_stock_transfer_process_p5yjs3.pdf",
+      //   linkText: "Source Creation",
+      //   details: "Source creation for Source Change & Stock Transfer Process WI"
+      // },
+      // {
+      //   href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735213/MA_IB_Master_data_housekeeping_for_new_release_PN_yflmop.pdf",
+      //   linkText: "Master Data Housekeeping",
+      //   details: "Master data housekeeping for new release PN"
+      // },
+      // {
+      //   href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763735212/Inventory_Management_Stocking_Policy_srhrps.pdf",
+      //   linkText: "Stocking Policy",
+      //   details: "Inventory Management Stocking Policy WI"
+      // },
       {
         href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1764649515/OSD6AP2-11_Internal_Audit_Procedure.pdf",
         linkText: "OSD6AP2-11_Internal_Audit_Procedure",
@@ -306,7 +306,7 @@ const Services: ServiceData[] = [
       },
       {
         href: "https://bosch.sharepoint.com/:x:/r/sites/msteams_7348963/_layouts/15/Doc.aspx?sourcedoc=%7BBADE1AB1-337C-491C-8A17-60ABBF44083E%7D&file=OSD6AP2-12-02-01_BOD%20Matrix.xlsx&action=default&mobileredirect=true)&isSPOFile=1&xsdata=MDV8MDJ8fDhjZjFmOGMyYThiZjRiNWQwNWQ4MDhkZTMwYjg2MTRlfDBhZTUxZTE5MDdjODRlNGJiYjZkNjQ4ZWU1ODQxMGY0fDB8MHw2MzkwMDE3NjU1OTc4MDgwODh8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKRFFTSTZJbFJsWVcxelgwRlVVRk5sY25acFkyVmZVMUJQVEU5R0lpd2lWaUk2SWpBdU1DNHdNREF3SWl3aVVDSTZJbGRwYmpNeUlpd2lRVTRpT2lKUGRHaGxjaUlzSWxkVUlqb3hNWDA9fDF8TDJOb1lYUnpMekU1T2pRNU0ySmpaVFEzTFdOa1lqVXRORFEwWWkwNVkySXhMV1kzTVdRNU1ESXlZMlF4TTE5bFl6RXpaREZtWkMxaU5XTm1MVFF5TVRrdE9UUTFZUzFtWkRsbE1HVmlaRGd6WW1OQWRXNXhMbWRpYkM1emNHRmpaWE12YldWemMyRm5aWE12TVRjMk5EVTNPVGMxTnpVeE5RPT18ZmRkNzhmMDMyMTk0NDc2YTkzNTYwOGRlMzBiODYxNGR8MDIxMmU3NmQxOGQ1NGY3Yzg3MGQ1ZjljMDE1Zjc5OGI%3D&sdata=V1pwcHJzS1dyTjY0c0FSTXcxbjlZVG51THd6VEdGTk1lWnBTNWNPSEpnRT0%3D&ovuser=0ae51e19-07c8-4e4b-bb6d-648ee58410f4%2Cpga7hc%40bosch.com",
-        linkText: "OSD6AP2-12-02-01 (Excel link)",
+        linkText: "OSD6AP2-12-02-01_BOD Matrix",
         details: "Excel link document"
       },
       {
