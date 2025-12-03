@@ -61,28 +61,28 @@ const Services: ServiceData[] = [
     },
     relatedLinks: [
       {
-        href: "",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736081/OSD6AP2-13_Procurement_Planning_Procedure.pdf",
         linkText: "OSD6AP2-13_Procurement_Planning_Procedure",
         details: "Procurement Planning Procedure"
       },
       {
-        href: "",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736081/OSD6AP2-13-02_Procurement_Plannng_-_An_Overview.pdf",
         linkText: "OSD6AP2-13-02_Procurement_Planning_-_An_Overview",
         details: "Procurement Planning - An Overview"
       },
       {
-        href: "",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736082/OSD6AP2-13-03-01_Creating_Scheduling_Agreement_Releases.pdf",
         linkText: "OSD6AP2-13-03-01_Creating_Scheduling_Agreement_Releases",
         details: "Creating Scheduling Agreement Releases"
       },
       {
-        href: "",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736084/OSD6AP2-13-3_Creating_Purchase_Order_with_Purchase_Requisition_Number.pdf",
         linkText:
           "OSD6AP2-13-03-02_Creating_Purchase_Order_with_Purchase_Requisition_Number",
         details: "Creating Purchase Order with Purchase Requisition Number"
       },
       {
-        href: "",
+        href: "https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763736082/OSD6AP2-13-03-03_Modifying_MM_Delivery_Schedule_Lines.pdf",
         linkText: "OSD6AP2-13-03-03_Modifying_MM_Delivery_Schedule_Lines",
         details: "Modifying MM Delivery Schedule Lines"
       }
