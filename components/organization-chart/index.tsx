@@ -53,13 +53,13 @@ const organizationData: Organization[] = [
 
                     [
 
-                        { name: 'Nguyen Duong Hoai PHUONG', id: 'VM-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557574/Nguyen_Duong_Hoai_Phuong_xqmyhq.jpg' },
+                        { name: 'Nguyen Duong Hoai PHUONG', id: 'GS/OSD6 APAC23 VM-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557574/Nguyen_Duong_Hoai_Phuong_xqmyhq.jpg' },
 
-                        { name: 'Tran Minh Anh THU', id: 'EM-CA, IPO-JP', role: 'Passthrough Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557582/Tran_Minh_Anh_Thu_hccdm3.jpg' },
+                        { name: 'Tran Minh Anh THU', id: 'GS/OSD6 APAC23 EM-CA, IPO-JP', role: 'Passthrough Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557582/Tran_Minh_Anh_Thu_hccdm3.jpg' },
 
-                        { name: 'Nguyen Tran Ngoc ANH', id: 'PS-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557576/Nguyen_Tran_Ngoc_Anh_ojmgaz.png' },
+                        { name: 'Nguyen Tran Ngoc ANH', id: 'GS/OSD6 APAC23 PS-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557576/Nguyen_Tran_Ngoc_Anh_ojmgaz.png' },
 
-                        { name: 'Trinh Thi Thien KIM', id: 'MusP/LDP-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557586/Trinh_Thi_Thien_Kim_hhmseq.jpg' },
+                        { name: 'Trinh Thi Thien KIM', id: 'GS/OSD6 APAC23 MusP/LDP-JP', role: 'Source Planning', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557586/Trinh_Thi_Thien_Kim_hhmseq.jpg' },
 
                     ],
 
@@ -132,11 +132,11 @@ const organizationData: Organization[] = [
 
                     [
 
-                        { name: 'Phan Thi Ha GIANG', id: 'GS/OSD6-APAC23 | GS/PSD63', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557578/Phan_Thi_Ha_Giang_hfywsc.jpg' },
+                        { name: 'Phan Thi Ha GIANG', id: 'GS/OSD6-APAC23 GS/PSD63', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557578/Phan_Thi_Ha_Giang_hfywsc.jpg' },
 
                         { name: 'Tran Ngoc DAN', id: 'GS/OSD6-APAC23', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557583/Tran_Ngoc_Dan_wgbrqn.jpg' },
 
-                        { name: 'Dinh Dang KHOA', id: 'GS/OSD6-APAC23 | GS/PSD63', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557572/Dinh_Dang_Khoa_q33mxc.jpg' },
+                        { name: 'Dinh Dang KHOA', id: 'GS/OSD6-APAC23 GS/PSD63', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557572/Dinh_Dang_Khoa_q33mxc.jpg' },
 
                     ],
 
