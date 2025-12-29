@@ -132,11 +132,11 @@ const organizationData: Organization[] = [
 
                     [
 
-                        { name: 'Phan Thi Ha GIANG', id: 'GS/OSD6-APAC23', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557578/Phan_Thi_Ha_Giang_hfywsc.jpg' },
+                        { name: 'Phan Thi Ha GIANG', id: 'GS/OSD6-APAC23 | GS/PSD63', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557578/Phan_Thi_Ha_Giang_hfywsc.jpg' },
 
                         { name: 'Tran Ngoc DAN', id: 'GS/OSD6-APAC23', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557583/Tran_Ngoc_Dan_wgbrqn.jpg' },
 
-                        { name: 'Dinh Dang KHOA', id: 'GS/OSD6-APAC23', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557572/Dinh_Dang_Khoa_q33mxc.jpg' },
+                        { name: 'Dinh Dang KHOA', id: 'GS/OSD6-APAC23 | GS/PSD63', role: 'DA & Digitalization', image: 'https://res.cloudinary.com/dr9bxbmwi/image/upload/v1763557572/Dinh_Dang_Khoa_q33mxc.jpg' },
 
                     ],
 
